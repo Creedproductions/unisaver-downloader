@@ -5,9 +5,9 @@
   <meta http-equiv="x-ua-compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Unisaver — All-in-One Media Downloader App (iOS & Android)</title>
-  <meta name="description" content="Unisaver is an all-in-one media downloader + browser toolkit. Quick Downloader, downloads from sites without download buttons, HD status posting, private vault, ad-block browser, internet speed test, link store, dedicated VPN, and more." />
-  <meta name="keywords" content="Unisaver, media downloader, quick downloader, ad blocker browser, VPN, speed test, status saver, vault, link store" />
+  <title>Unisaver — Official App | Download, Organize & Protect Your Media</title>
+  <meta name="description" content="Unisaver is an all-in-one media downloader + organizer. Save videos, reels, stories, photos & audio from social platforms and 1000+ sites. Includes Quick Downloader, status tools, ad-block browser, VPN, vault, speed test, link store and more." />
+  <meta name="keywords" content="Unisaver, media downloader, video downloader, status saver, reels downloader, ad blocker browser, VPN, vault, speed test, link store" />
   <link rel="canonical" href="https://unisaver-downloader.vercel.app/" />
 
   <!-- Ad network site verification -->
@@ -16,1302 +16,947 @@
   <!-- Favicons -->
   <link rel="icon" href="logo.png" />
   <link rel="apple-touch-icon" href="logo.png" sizes="180x180" />
-  <meta name="theme-color" content="#1E88E5" />
+  <meta name="theme-color" content="#1f6fff" />
 
   <!-- Open Graph / Twitter -->
   <meta property="og:title" content="Unisaver — Official App" />
-  <meta property="og:description" content="All-in-one media downloader + browser toolkit: Quick Downloader, ad-block, VPN, speed test, vault, link store, status tools." />
+  <meta property="og:description" content="Save, organize & protect your media. Quick Downloader, vault, ad-block browser, VPN, speed test, link store, status tools and more." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://unisaver-downloader.vercel.app/" />
   <meta property="og:image" content="https://unisaver-downloader.vercel.app/og-image.jpg" />
   <meta property="og:locale" content="en_US" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Unisaver — Official App" />
+  <meta name="twitter:description" content="Save, organize & protect your media. Quick Downloader, vault, ad-block browser, VPN, speed test, link store, status tools and more." />
+  <meta name="twitter:image" content="https://unisaver-downloader.vercel.app/og-image.jpg" />
 
   <!-- iOS Smart App Banner -->
   <meta name="apple-itunes-app" content="app-id=6746811725, affiliate-data=ct=webbanner&pt=123456, app-argument=unisaver://home" />
 
+  <!-- Default API (can be overridden by config.json) -->
+  <meta name="unisaver-api" content="https://valid-jacquelin-unisaver-f6c7b6d7.koyeb.app/api" />
+
+  <!-- Fonts + Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <!-- DICLOTRANS banner SDK -->
+  <script type="text/javascript" src="https://cdn.diclotrans.com/sdk/v1/54204/ecad6b52059d10dfd47d723133d9b16512b93300/lib.js" defer></script>
+
   <style>
     :root{
-      /* colors */
-      --bg0:#050812;
-      --bg1:#070C18;
-      --bg2:#0B1220;
+      --brand:#1f6fff;
+      --brand2:#00bcd4;
+      --ink:#0b1220;
+      --muted:#556277;
+      --muted2:#7b889c;
 
-      --card: rgba(255,255,255,.06);
-      --card2: rgba(255,255,255,.08);
-      --stroke: rgba(255,255,255,.10);
-      --stroke2: rgba(255,255,255,.16);
+      --bg:#0b1020;
+      --bg2:#0f1730;
+      --card:#0f1a36;
+      --card2:#121f42;
+      --stroke:rgba(255,255,255,.08);
+      --stroke2:rgba(255,255,255,.12);
 
-      --text:#ECF3FF;
-      --muted: rgba(236,243,255,.72);
-      --muted2: rgba(236,243,255,.55);
+      --white:#ffffff;
+      --shadow: 0 16px 50px rgba(0,0,0,.35);
+      --shadow2: 0 10px 24px rgba(0,0,0,.25);
 
-      --brand:#1E88E5;
-      --brand2:#42A5F5;
-      --cyan:#00BCD4;
-      --lime:#7CFF6B;
-      --amber:#FFB300;
-      --rose:#FF5DA2;
-
-      --grad: linear-gradient(135deg, var(--brand) 0%, var(--cyan) 100%);
-      --glow: 0 0 0 1px rgba(255,255,255,.08), 0 24px 90px rgba(30,136,229,.25);
-      --shadow: 0 16px 60px rgba(0,0,0,.55);
-      --shadow2: 0 14px 34px rgba(30,136,229,.22);
-
-      /* spacing */
-      --radius: 18px;
-      --radius-lg: 28px;
-      --container: 1200px;
-
-      --s1: 10px;
-      --s2: 14px;
-      --s3: 18px;
-      --s4: 24px;
-      --s5: 34px;
-      --s6: 46px;
-      --s7: 64px;
-      --s8: 86px;
+      --grad: linear-gradient(135deg, rgba(31,111,255,.95), rgba(0,188,212,.9));
+      --grad2: radial-gradient(900px 500px at 20% 20%, rgba(31,111,255,.25), transparent 60%),
+               radial-gradient(900px 500px at 80% 65%, rgba(0,188,212,.18), transparent 60%);
+      --radius: 22px;
+      --radius2: 28px;
     }
 
     *{box-sizing:border-box}
-    html,body{height:100%}
+    html,body{margin:0;height:100%}
     body{
-      margin:0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(1200px 700px at 12% -10%, rgba(30,136,229,.38), transparent 58%),
-        radial-gradient(900px 600px at 90% 10%, rgba(0,188,212,.22), transparent 58%),
-        radial-gradient(1000px 800px at 55% 115%, rgba(255,93,162,.13), transparent 62%),
-        linear-gradient(180deg, var(--bg0) 0%, var(--bg1) 55%, var(--bg2) 100%);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background: var(--bg);
+      color: rgba(255,255,255,.92);
+      line-height:1.65;
       overflow-x:hidden;
-      scroll-behavior:smooth;
     }
-
     a{color:inherit}
     img{max-width:100%;display:block}
-    .container{max-width:var(--container);margin:0 auto;padding:0 22px}
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
-    /* floating background orbs */
-    .bg-orbs{position:fixed;inset:-20vh -20vw;z-index:-1;pointer-events:none;filter: blur(55px);opacity:.55}
-    .orb{position:absolute;border-radius:999px;mix-blend-mode:screen;animation: drift 18s ease-in-out infinite}
-    .orb:nth-child(1){width:560px;height:560px;left:8%;top:8%;background:rgba(30,136,229,.34)}
-    .orb:nth-child(2){width:460px;height:460px;left:68%;top:3%;background:rgba(0,188,212,.24);animation-delay:-6s}
-    .orb:nth-child(3){width:700px;height:700px;left:30%;top:55%;background:rgba(255,93,162,.16);animation-delay:-12s}
-    @keyframes drift{
-      0%,100%{transform:translate3d(0,0,0) scale(1)}
-      50%{transform:translate3d(80px, -60px, 0) scale(1.08)}
+    /* Layout helpers */
+    .container{max-width:1180px;margin:0 auto;padding:0 18px}
+    .section{padding:84px 0}
+    .section.tight{padding:60px 0}
+    .grid{display:grid;gap:18px}
+    .pill{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:10px 14px;border-radius:999px;
+      background:rgba(255,255,255,.06);
+      border:1px solid var(--stroke);
+      color:rgba(255,255,255,.92);
+      font-weight:800;
+      letter-spacing:.2px;
+    }
+    .pill .dot{width:10px;height:10px;border-radius:50%;background:var(--brand)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:14px 16px;border-radius:16px;
+      text-decoration:none;
+      font-weight:900;
+      border:1px solid var(--stroke2);
+      background:rgba(255,255,255,.06);
+      transition:.25s ease;
+      user-select:none;
+      cursor:pointer;
+    }
+    .btn:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.18)}
+    .btn.primary{
+      background: var(--grad);
+      border-color:transparent;
+      box-shadow: 0 18px 44px rgba(31,111,255,.25);
+    }
+    .btn.ghost{background:transparent}
+    .btn.small{padding:10px 12px;border-radius:14px;font-weight:800}
+    .btn.full{width:100%}
+
+    .card{
+      background: linear-gradient(180deg, rgba(18,31,66,.92), rgba(15,26,54,.92));
+      border:1px solid var(--stroke);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow2);
     }
 
-    /* header */
-    .header{
-      position:sticky;top:0;z-index:1000;
-      background: rgba(4,6,10,.55);
-      backdrop-filter: blur(14px);
+    /* Top nav */
+    .topbar{
+      position:sticky;top:0;z-index:100;
+      background: rgba(11,16,32,.65);
+      backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(255,255,255,.08);
     }
     .nav{
-      height:72px;
       display:flex;align-items:center;justify-content:space-between;
-      gap:14px;
+      padding:14px 0;
     }
     .brand{
-      display:flex;align-items:center;gap:12px;
+      display:flex;align-items:center;gap:10px;
       text-decoration:none;
-      font-weight:950;
-      letter-spacing:-.4px;
+      font-weight:900;
+      letter-spacing:.2px;
     }
-    .brand-badge{
-      width:40px;height:40px;border-radius:14px;
+    .brand .logo{
+      width:40px;height:40px;border-radius:12px;
       background: var(--grad);
-      box-shadow: var(--shadow2);
-      display:grid;place-items:center;
+      display:flex;align-items:center;justify-content:center;
       overflow:hidden;
-      border:1px solid rgba(255,255,255,.15);
+      border:1px solid rgba(255,255,255,.14);
     }
-    .brand-badge img{width:100%;height:100%;object-fit:cover}
-    .brand-name{font-size:1.08rem}
-    .nav-links{
-      display:flex;gap:10px;align-items:center;
-      flex-wrap:wrap;
-      justify-content:center;
-    }
-    .nav-links a{
+    .brand .logo img{width:100%;height:100%;object-fit:cover}
+    .navlinks{display:flex;gap:16px;align-items:center}
+    .navlinks a{
       text-decoration:none;
+      color:rgba(255,255,255,.86);
+      font-weight:800;
+      padding:10px 10px;border-radius:12px;
+      border:1px solid transparent;
+      transition:.2s ease;
+    }
+    .navlinks a:hover{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.08)}
+    .nav-right{display:flex;gap:10px;align-items:center}
+    .iconbtn{
+      width:42px;height:42px;border-radius:14px;
+      display:inline-flex;align-items:center;justify-content:center;
+      background:rgba(255,255,255,.06);
+      border:1px solid var(--stroke);
+      transition:.2s ease;
+      text-decoration:none;
+    }
+    .iconbtn:hover{transform:translateY(-2px)}
+    .hamburger{display:none}
+
+    /* Mobile menu */
+    .mobileMenu{
+      display:none;
+      padding: 0 0 16px;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+    .mobileMenu a{
+      display:block;
+      padding:12px 12px;
+      margin:8px 0;
+      border-radius:14px;
+      text-decoration:none;
+      font-weight:900;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+    }
+
+    /* Hero */
+    .hero{
+      padding:78px 0 50px;
+      background: var(--grad2);
+      position:relative;
+      overflow:hidden;
+    }
+    .hero .wrap{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 28px;
+      align-items:center;
+    }
+    .headline{
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      line-height:1.05;
+      margin: 14px 0 14px;
+      letter-spacing:-.02em;
+    }
+    .lead{
+      max-width: 62ch;
+      color: rgba(255,255,255,.78);
+      font-size: 1.06rem;
+      margin: 0 0 18px;
+    }
+    .heroCtas{display:flex;gap:12px;flex-wrap:wrap;margin-top: 14px}
+    .heroMeta{
+      display:flex;gap:12px;flex-wrap:wrap;margin-top:16px;
+      color: rgba(255,255,255,.75);
       font-weight:800;
       font-size:.92rem;
-      color:rgba(236,243,255,.86);
-      padding:10px 12px;
-      border-radius:999px;
-      transition:.2s ease;
     }
-    .nav-links a:hover{background:rgba(255,255,255,.06)}
-    .nav-cta{display:flex;gap:10px;align-items:center}
-    .pill{
-      display:inline-flex;align-items:center;gap:10px;
-      padding:10px 14px;
-      border-radius:999px;
-      font-weight:900;
-      text-decoration:none;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      transition:.2s ease;
-      white-space:nowrap;
+    .heroMeta .m{display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
+    .heroMeta i{color:rgba(255,255,255,.9)}
+
+    /* Phone / preview */
+    .phoneCard{
+      border-radius: var(--radius2);
+      padding: 16px;
+      border:1px solid rgba(255,255,255,.12);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      box-shadow: var(--shadow);
+      position:relative;
     }
-    .pill:hover{transform:translateY(-1px);background: rgba(255,255,255,.09)}
-    .pill.primary{
-      background: var(--grad);
-      border-color: rgba(255,255,255,.18);
-      box-shadow: var(--shadow2);
+    .phone{
+      width:100%;
+      aspect-ratio: 9/16;
+      border-radius: 26px;
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,.14);
+      background: #0a0f20;
+      position:relative;
     }
-    .menu-btn{
-      display:none;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      color:var(--text);
-      width:46px;height:46px;border-radius:14px;
+    .slide{position:absolute;inset:0;opacity:0;transform:translateX(14px);transition:.7s cubic-bezier(.2,.8,.2,1)}
+    .slide.active{opacity:1;transform:translateX(0)}
+    .slide img{width:100%;height:100%;object-fit:cover}
+    .sliderNav{
+      position:absolute;inset:auto 12px 12px 12px;
+      display:flex;align-items:center;justify-content:space-between;
+      gap:10px;
+    }
+    .dots{display:flex;gap:6px;align-items:center}
+    .dot{
+      width:7px;height:7px;border-radius:50%;
+      background:rgba(255,255,255,.35);
+      border:1px solid rgba(255,255,255,.18);
       cursor:pointer;
+      transition:.2s ease;
     }
-    .drawer{
-      display:none;
-      border-top:1px solid rgba(255,255,255,.08);
-      background: rgba(4,6,10,.70);
-      backdrop-filter: blur(14px);
+    .dot.active{background:rgba(255,255,255,.9);transform:scale(1.15)}
+    .navBtn{
+      width:40px;height:40px;border-radius:14px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(0,0,0,.25);
+      color:#fff;
+      display:flex;align-items:center;justify-content:center;
+      cursor:pointer;
+      transition:.2s ease;
     }
-    .drawer-inner{padding:12px 0}
-    .drawer-grid{
+    .navBtn:hover{transform:translateY(-2px)}
+    .phoneHint{
+      margin-top: 12px;
+      color: rgba(255,255,255,.75);
+      font-weight:800;
+      font-size:.92rem;
+      display:flex;gap:10px;align-items:center;
+    }
+
+    /* Section titles */
+    .title{
+      margin:0 0 10px;
+      font-size: clamp(1.55rem, 2.3vw, 2.1rem);
+      letter-spacing:-.01em;
+    }
+    .subtitle{margin:0;color:rgba(255,255,255,.75);max-width:70ch}
+
+    /* Highlights */
+    .highlights{
+      margin-top: 22px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .h{
+      padding:18px;
+      border-radius: var(--radius);
+      border:1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.04);
+      min-height: 110px;
+    }
+    .h strong{display:block;font-size:1.3rem}
+    .h span{color:rgba(255,255,255,.75);font-weight:700}
+
+    /* Feature explorer */
+    .featureExplorer{
+      margin-top: 26px;
+      display:grid;
+      grid-template-columns: 320px 1fr;
+      gap: 16px;
+      align-items:start;
+    }
+    .featureTabs{
+      padding:16px;
+    }
+    .tab{
+      width:100%;
+      text-align:left;
+      padding:12px 12px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.08);
+      background:rgba(255,255,255,.04);
+      color:rgba(255,255,255,.92);
+      font-weight:900;
+      cursor:pointer;
+      transition:.2s ease;
+      display:flex;gap:10px;align-items:center;
+      margin-bottom:10px;
+    }
+    .tab:hover{transform:translateY(-2px)}
+    .tab.active{background:rgba(31,111,255,.18);border-color:rgba(31,111,255,.35)}
+    .featurePanel{
+      padding:22px;
+      min-height: 340px;
+    }
+    .panelTop{
+      display:flex;gap:12px;align-items:center;flex-wrap:wrap;
+      margin-bottom: 10px;
+    }
+    .bigIcon{
+      width:44px;height:44px;border-radius:16px;
+      background: rgba(31,111,255,.18);
+      border:1px solid rgba(31,111,255,.32);
+      display:flex;align-items:center;justify-content:center;
+    }
+    .featureList{
+      margin-top: 14px;
       display:grid;gap:10px;
       grid-template-columns: 1fr 1fr;
     }
-    .drawer-grid a{
-      text-decoration:none;font-weight:900;
+    .li{
       padding:12px 12px;border-radius:16px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.05);
-    }
-
-    /* section basics */
-    section{padding: var(--s8) 0}
-    .section-head{
-      display:flex;align-items:flex-end;justify-content:space-between;
-      gap:18px;flex-wrap:wrap;
-      margin-bottom: var(--s5);
-    }
-    .kicker{
-      color: rgba(236,243,255,.68);
-      font-weight:950;
-      letter-spacing:.18em;
-      text-transform:uppercase;
-      font-size:.78rem;
-    }
-    .h2{
-      margin: 10px 0 0;
-      font-size: clamp(1.8rem, 3vw, 2.5rem);
-      letter-spacing:-.8px;
-      font-weight:950;
-      line-height:1.12;
-    }
-    .lead{
-      margin:0;
-      color: var(--muted);
-      max-width: 75ch;
-      font-weight:650;
-      line-height:1.65;
-    }
-
-    /* hero */
-    .hero{
-      padding: calc(var(--s8) + 14px) 0 var(--s6);
-    }
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: var(--s6);
-      align-items:center;
-    }
-    .chip{
-      display:inline-flex;align-items:center;gap:10px;
-      padding:10px 14px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      color: rgba(236,243,255,.92);
-      font-weight:950;
-      font-size:.88rem;
-    }
-    .h1{
-      margin: var(--s4) 0 var(--s3);
-      font-size: clamp(2.35rem, 4.9vw, 3.85rem);
-      line-height:1.02;
-      letter-spacing:-1.2px;
-      font-weight:950;
-    }
-    .grad-text{
-      background: linear-gradient(135deg, #ffffff 0%, rgba(255,255,255,.92) 38%, rgba(66,165,245,.98) 70%, rgba(0,188,212,.92) 100%);
-      -webkit-background-clip:text;background-clip:text;
-      -webkit-text-fill-color:transparent;
-    }
-    .sub{
-      margin:0 0 var(--s4);
-      color: var(--muted);
-      font-size: 1.08rem;
-      line-height: 1.75;
-      max-width: 70ch;
-    }
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-    .store{
-      display:inline-flex;align-items:center;gap:10px;
-      padding:14px 16px;border-radius:18px;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      text-decoration:none;
-      font-weight:950;
-      transition:.2s ease;
-    }
-    .store:hover{transform:translateY(-1px);background: rgba(255,255,255,.09)}
-    .store.primary{background: var(--grad); box-shadow: var(--shadow2); border-color: rgba(255,255,255,.18)}
-    .store img{width:20px;height:20px;object-fit:contain}
-    .hero-bullets{
-      margin-top: var(--s4);
-      display:grid;
-      gap:10px;
-      grid-template-columns: 1fr 1fr;
-      max-width: 720px;
-    }
-    .bullet{
+      background: rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.08);
+      color: rgba(255,255,255,.82);
+      font-weight:800;
       display:flex;gap:10px;align-items:flex-start;
-      padding:12px 12px;
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.05);
-      color: rgba(236,243,255,.86);
-      font-weight:850;
-      line-height:1.45;
     }
-    .bullet i{color: rgba(124,255,107,.95); margin-top:3px}
-    .bullet span{color:rgba(236,243,255,.76); font-weight:750; display:block; margin-top:2px}
+    .li i{margin-top:3px;color: rgba(255,255,255,.9)}
 
-    /* right side: “live preview” phone + cards */
-    .preview{
-      position:relative;
-      border-radius: var(--radius-lg);
-      border:1px solid rgba(255,255,255,.14);
-      background: linear-gradient(135deg, rgba(255,255,255,.08) 0%, rgba(255,255,255,.03) 100%);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-      padding: 18px;
-    }
-    .preview-top{
-      display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
-      margin-bottom: 12px;
-    }
-    .status{
-      display:inline-flex;align-items:center;gap:10px;
-      color: rgba(236,243,255,.70);
-      font-weight:900;
-      font-size:.9rem;
-    }
-    .spark{
-      width:10px;height:10px;border-radius:99px;
-      background: rgba(124,255,107,.95);
-      box-shadow: 0 0 0 3px rgba(124,255,107,.14);
-    }
-    .mini-cta{
-      display:inline-flex;gap:10px;align-items:center;
-      padding:10px 12px;border-radius:999px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(0,0,0,.25);
-      text-decoration:none;
-      font-weight:950;
-    }
-    .phone{
-      aspect-ratio: 9/16;
-      border-radius: 28px;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(0,0,0,.25);
-      overflow:hidden;
-      position:relative;
-    }
-    .slides{position:absolute;inset:0}
-    .slide{
-      position:absolute;inset:0;
-      opacity:0;
-      transform: translateX(14px) scale(.99);
-      transition: .65s cubic-bezier(.2,.8,.2,1);
-    }
-    .slide.active{opacity:1;transform:translateX(0) scale(1)}
-    .slide img{width:100%;height:100%;object-fit:cover}
-    .shade{
-      position:absolute;inset:0;
-      background:
-        radial-gradient(900px 420px at 25% 10%, rgba(30,136,229,.18), transparent 60%),
-        radial-gradient(700px 420px at 80% 90%, rgba(0,188,212,.12), transparent 60%);
-      pointer-events:none;
-    }
-    .phone-controls{
-      position:absolute;left:12px;right:12px;bottom:12px;
-      display:flex;align-items:center;justify-content:space-between;gap:10px;
-    }
-    .iconbtn{
-      width:44px;height:44px;border-radius:16px;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(0,0,0,.28);
-      color:rgba(255,255,255,.92);
-      cursor:pointer;
-      transition:.2s ease;
-      backdrop-filter: blur(10px);
-    }
-    .iconbtn:hover{transform:translateY(-1px); background: rgba(0,0,0,.38)}
-    .dots{display:flex;gap:8px;align-items:center}
-    .dot{
-      width:8px;height:8px;border-radius:99px;
-      background: rgba(255,255,255,.22);
-      cursor:pointer;
-      transition:.2s ease;
-    }
-    .dot.active{background: rgba(255,255,255,.86); transform: scale(1.2)}
-    .preview-cards{
-      margin-top: 14px;
+    /* Web downloader */
+    .downloaderGrid{
+      margin-top: 22px;
       display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-    .pcard{
-      padding:14px 14px;
-      border-radius: 18px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.05);
-      box-shadow: 0 12px 30px rgba(0,0,0,.30);
-    }
-    .pcard strong{display:block;font-weight:950;letter-spacing:-.2px}
-    .pcard small{display:block;margin-top:6px;color:var(--muted2);font-weight:750;line-height:1.5}
-    .pcard i{color: rgba(66,165,245,.95); margin-right:8px}
-
-    /* platform grid */
-    .platforms{
-      display:grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 12px;
-      margin-top: 18px;
-    }
-    .plat{
-      padding:14px 12px;
-      border-radius: 18px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.05);
-      display:flex;align-items:center;justify-content:center;gap:10px;
-      font-weight:900;
-      color:rgba(236,243,255,.86);
-      user-select:none;
-    }
-    .plat i{opacity:.9}
-    .plat span{font-size:.92rem}
-
-    /* big feature sections */
-    .grid3{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-    }
-    .card{
-      background: rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.12);
-      border-radius: var(--radius-lg);
-      padding: 20px;
-      box-shadow: 0 14px 44px rgba(0,0,0,.36);
-      position:relative;
-      overflow:hidden;
-      transition: .2s ease;
-    }
-    .card:hover{transform:translateY(-4px); border-color: rgba(255,255,255,.18)}
-    .card::after{
-      content:"";
-      position:absolute; inset:-120px -120px auto auto;
-      width:260px;height:260px;border-radius:999px;
-      background: radial-gradient(circle at 30% 30%, rgba(66,165,245,.22), transparent 65%);
-      pointer-events:none;
-    }
-    .ico{
-      width:48px;height:48px;border-radius:16px;
-      display:grid;place-items:center;
-      background: linear-gradient(135deg, rgba(30,136,229,.35), rgba(0,188,212,.22));
-      border:1px solid rgba(255,255,255,.14);
-      box-shadow: 0 12px 26px rgba(0,0,0,.35);
-      margin-bottom: 12px;
-      color:rgba(255,255,255,.95);
-      font-size:1.05rem;
-    }
-    .card h3{margin:0 0 10px;font-weight:950;letter-spacing:-.3px}
-    .card p{margin:0;color:var(--muted);line-height:1.7}
-
-    /* feature deep-dive with tabs */
-    .tabs{
-      display:grid;
-      grid-template-columns: 360px 1fr;
-      gap: 14px;
-      margin-top: 18px;
-    }
-    .tablist{
-      background: rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.12);
-      border-radius: var(--radius-lg);
-      overflow:hidden;
-      box-shadow: 0 14px 44px rgba(0,0,0,.34);
-    }
-    .tabbtn{
-      width:100%;
-      display:flex; gap:12px; align-items:flex-start;
-      padding:16px 16px;
-      border:0;
-      background: transparent;
-      color:rgba(236,243,255,.90);
-      cursor:pointer;
-      text-align:left;
-      border-bottom:1px solid rgba(255,255,255,.08);
-    }
-    .tabbtn:last-child{border-bottom:0}
-    .tabbtn strong{display:block;font-weight:950}
-    .tabbtn small{display:block;color:var(--muted2);font-weight:750;margin-top:4px;line-height:1.45}
-    .tabbtn.active{
-      background: linear-gradient(135deg, rgba(30,136,229,.22), rgba(0,188,212,.12));
-    }
-
-    .panel{
-      background: rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.12);
-      border-radius: var(--radius-lg);
-      padding: 20px;
-      box-shadow: 0 14px 44px rgba(0,0,0,.36);
-      position:relative;
-      overflow:hidden;
-    }
-    .panel-top{
-      display:flex;align-items:flex-start;justify-content:space-between;
-      gap: 14px; flex-wrap:wrap;
-    }
-    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
-    .tag{
-      font-size:.84rem;
-      font-weight:950;
-      padding:9px 11px;border-radius:999px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(0,0,0,.25);
-      color: rgba(236,243,255,.86);
-      display:inline-flex;align-items:center;gap:8px;
-    }
-    .tag i{opacity:.9}
-    .media{
-      margin-top: 16px;
-      border-radius: 20px;
-      border:1px solid rgba(255,255,255,.12);
-      overflow:hidden;
-      background: rgba(0,0,0,.20);
-      aspect-ratio: 16/9;
-      position:relative;
-      cursor:pointer;
-    }
-    .media img{width:100%;height:100%;object-fit:cover;opacity:.95}
-    .media .overlay{
-      position:absolute;inset:0;
-      display:grid;place-items:center;
-      background: radial-gradient(circle at 50% 50%, rgba(0,0,0,.08), rgba(0,0,0,.55));
-    }
-    .media .circle{
-      width:72px;height:72px;border-radius:999px;
-      display:grid;place-items:center;
-      border:1px solid rgba(255,255,255,.18);
-      background: rgba(255,255,255,.08);
-      box-shadow: var(--shadow2);
-      transition:.2s ease;
-      color: rgba(255,255,255,.92);
-    }
-    .media:hover .circle{transform:scale(1.06)}
-
-    /* screenshot gallery */
-    .shots{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1.15fr .85fr;
       gap: 16px;
-      margin-top: 10px;
+      align-items:start;
     }
-    .shot{
-      border-radius: 26px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.05);
-      box-shadow: 0 14px 44px rgba(0,0,0,.34);
-      overflow:hidden;
-      position:relative;
-    }
-    .shot::before{
-      content:"";
-      position:absolute; inset:0;
-      background: radial-gradient(900px 500px at 20% 15%, rgba(30,136,229,.14), transparent 62%);
-      pointer-events:none;
-    }
-    .shot .frame{
-      /* key: show entire screenshot */
-      aspect-ratio: 9/16;
-      display:grid;place-items:center;
-      padding: 12px;
-    }
-    .shot img{
+    .dlCard{padding:22px}
+    .input{
       width:100%;
-      height:100%;
-      object-fit:contain; /* show full screenshot */
-      border-radius: 18px;
-      background: rgba(0,0,0,.18);
+      padding:14px 14px;
+      border-radius:16px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.12);
+      color:#fff;
+      outline:none;
+      font-size: 1rem;
+      transition:.2s ease;
+    }
+    .input:focus{border-color:rgba(31,111,255,.55);box-shadow:0 0 0 4px rgba(31,111,255,.16)}
+    .modeRow{
+      display:flex;gap:10px;flex-wrap:wrap;margin: 10px 0 14px;
+    }
+    .mode{
+      flex:1;
+      padding:12px 12px;
+      border-radius:16px;
       border:1px solid rgba(255,255,255,.10);
-    }
-    .shot .cap{
-      padding: 12px 14px 14px;
-      border-top: 1px solid rgba(255,255,255,.08);
-      color: rgba(236,243,255,.86);
-      font-weight:950;
-      display:flex;justify-content:space-between;gap:12px;align-items:center;
-    }
-    .shot .cap small{display:block;color:var(--muted2);font-weight:750;margin-top:4px;line-height:1.35}
-    .zoom{
-      width:42px;height:42px;border-radius:16px;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(0,0,0,.28);
-      color:rgba(255,255,255,.92);
+      background:rgba(255,255,255,.04);
+      font-weight:900;
       cursor:pointer;
+      display:flex;gap:10px;align-items:center;justify-content:center;
       transition:.2s ease;
+      min-width: 140px;
     }
-    .zoom:hover{transform:translateY(-1px); background: rgba(0,0,0,.38)}
-
-    /* faq */
-    .faq{
-      display:grid; grid-template-columns: 1fr 1fr;
-      gap: 14px;
+    .mode.active{background: rgba(31,111,255,.18);border-color: rgba(31,111,255,.35)}
+    .rowBtns{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .msg{
+      margin-top: 14px;
+      padding:12px 12px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.04);
+      font-weight:800;
+      color: rgba(255,255,255,.82);
+      display:flex;gap:10px;align-items:flex-start;
     }
-    details{
-      border-radius: var(--radius-lg);
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.06);
-      box-shadow: 0 14px 44px rgba(0,0,0,.34);
-      padding: 16px 18px;
-    }
-    summary{
-      cursor:pointer;
-      font-weight:950;
-      list-style:none;
-      display:flex;align-items:center;justify-content:space-between;gap:10px;
-    }
-    summary::-webkit-details-marker{display:none}
-    details p{margin:12px 0 0;color:var(--muted);font-weight:700;line-height:1.7}
-
-    /* support card */
-    .support{
-      display:grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 14px;
+    .msg.success{border-color: rgba(80,200,120,.35); background: rgba(80,200,120,.08)}
+    .msg.error{border-color: rgba(255,90,90,.35); background: rgba(255,90,90,.08)}
+    .progress{
       margin-top: 12px;
-    }
-    .support .box{
-      border-radius: var(--radius-lg);
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.06);
-      box-shadow: 0 14px 44px rgba(0,0,0,.34);
-      padding: 20px;
-    }
-    .support .box h3{margin:0 0 10px;font-weight:950}
-    .support .box p{margin:0;color:var(--muted);line-height:1.7}
-    .support .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
-    .btn{
-      display:inline-flex;align-items:center;gap:10px;
-      padding:14px 16px;border-radius:18px;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      color: rgba(236,243,255,.92);
-      font-weight:950;
-      cursor:pointer;
-      transition:.2s ease;
-      text-decoration:none;
-      white-space:nowrap;
-    }
-    .btn:hover{transform:translateY(-1px);background: rgba(255,255,255,.09)}
-    .btn.primary{background: var(--grad); border-color: rgba(255,255,255,.18); box-shadow: var(--shadow2)}
-    .btn.ghost{background: rgba(0,0,0,.22)}
-    .smallnote{margin-top:12px;color:var(--muted2);font-weight:750;line-height:1.6}
-
-    /* footer + sticky CTA */
-    .footer{
-      padding: 28px 0 34px;
-      border-top:1px solid rgba(255,255,255,.08);
-      color: var(--muted2);
-    }
-    .foot{
-      display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center
-    }
-    .social{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-    .social a{font-weight:950}
-
-    .sticky{
-      position:fixed; left:50%; bottom:16px; transform:translateX(-50%);
-      z-index:1500;
-      width:min(1040px, calc(100% - 28px));
-      background: rgba(0,0,0,.45);
-      border:1px solid rgba(255,255,255,.14);
-      border-radius: 24px;
-      padding: 12px 12px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(14px);
-      display:flex; align-items:center; justify-content:space-between;
-      gap:12px; flex-wrap:wrap;
-    }
-    .sticky .left{
-      display:flex;align-items:center;gap:12px;flex-wrap:wrap
-    }
-    .sticky .logo{
-      width:38px;height:38px;border-radius:14px;
-      background: var(--grad);
-      border:1px solid rgba(255,255,255,.18);
-      overflow:hidden;
-    }
-    .sticky .logo img{width:100%;height:100%;object-fit:cover}
-    .sticky strong{font-weight:950}
-    .sticky small{display:block;color:var(--muted2);font-weight:800;margin-top:2px}
-    .sticky .right{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-    .close{
-      width:46px;height:46px;border-radius:18px;
-      display:inline-grid;place-items:center;
-    }
-    .hidden{display:none !important}
-
-    /* modal for zoom */
-    .modal{
-      position:fixed; inset:0;
-      background: rgba(0,0,0,.76);
-      backdrop-filter: blur(10px);
+      padding: 12px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.03);
       display:none;
-      z-index:3000;
-      align-items:center; justify-content:center;
+    }
+    .bar{height:10px;border-radius:999px;background:rgba(255,255,255,.10);overflow:hidden}
+    .fill{height:100%;width:0%;background: var(--grad);transition:.2s ease}
+    .ptext{margin-top:10px;font-weight:900;color:rgba(255,255,255,.86)}
+    .dlRight{padding:22px}
+    .mini{
+      padding:14px;border-radius:18px;border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      margin-bottom:12px;
+    }
+    .mini h4{margin:0 0 6px}
+    .mini p{margin:0;color:rgba(255,255,255,.75)}
+    .note{
+      font-size:.92rem;color:rgba(255,255,255,.7);font-weight:800;margin-top:12px
+    }
+
+    /* Screenshot gallery */
+    .shots{margin-top: 22px; grid-template-columns: repeat(3, 1fr)}
+    .shot{
+      border-radius: 24px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+      position:relative;
+      cursor:pointer;
+      transition:.25s ease;
+    }
+    .shot:hover{transform:translateY(-4px)}
+    .shot img{width:100%;height:100%;object-fit:cover;aspect-ratio: 9/16}
+    .shot .cap{
+      position:absolute;inset:auto 10px 10px 10px;
+      padding:10px 12px;border-radius:16px;
+      background: rgba(0,0,0,.45);
+      border:1px solid rgba(255,255,255,.16);
+      font-weight:900;
+      font-size:.92rem;
+    }
+
+    /* Lightbox */
+    .lightbox{
+      position:fixed;inset:0;z-index:999;
+      background: rgba(0,0,0,.85);
+      display:none;
+      align-items:center;justify-content:center;
       padding:18px;
     }
-    .modal.open{display:flex}
-    .modal-card{
-      width:min(980px, 100%);
-      border-radius: 24px;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(10,14,22,.92);
-      box-shadow: var(--shadow);
+    .lightbox.open{display:flex}
+    .lbWrap{
+      width:min(520px, 96vw);
+      border-radius: 28px;
       overflow:hidden;
+      border:1px solid rgba(255,255,255,.14);
+      background:#000;
+      box-shadow: var(--shadow);
+      position:relative;
     }
-    .modal-top{
-      display:flex;align-items:center;justify-content:space-between;
-      padding:12px 14px;
-      border-bottom:1px solid rgba(255,255,255,.08);
+    .lbWrap img{width:100%;height:auto;display:block}
+    .lbClose{
+      position:absolute;top:10px;right:10px;
+      width:42px;height:42px;border-radius:14px;
+      background: rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.18);
+      color:#fff;
+      cursor:pointer;
+      display:flex;align-items:center;justify-content:center;
     }
-    .modal-top strong{font-weight:950}
-    .modal-body{padding: 14px}
-    .modal-img{
-      width:100%;
-      max-height: 75vh;
-      object-fit: contain;
-      background: rgba(0,0,0,.22);
+
+    /* FAQ */
+    .faq{margin-top: 22px}
+    .qa{
+      padding:16px;
+      border-radius: 20px;
       border:1px solid rgba(255,255,255,.10);
-      border-radius: 18px;
+      background: rgba(255,255,255,.04);
+      margin-bottom: 12px;
     }
+    .q{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:12px;
+      cursor:pointer;
+      font-weight:900;
+    }
+    .a{
+      display:none;
+      margin-top: 10px;
+      color: rgba(255,255,255,.78);
+      font-weight:700;
+    }
+    .qa.open .a{display:block}
+    .qa .chev{transition:.2s ease}
+    .qa.open .chev{transform:rotate(180deg)}
 
-    /* responsive */
-    @media (max-width: 1020px){
-      .hero-grid{grid-template-columns:1fr;gap: var(--s5)}
-      .tabs{grid-template-columns:1fr}
-      .grid3{grid-template-columns:1fr}
-      .support{grid-template-columns:1fr}
-      .platforms{grid-template-columns: repeat(3, 1fr)}
+    /* Footer */
+    .footer{
+      padding: 30px 0 50px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.02);
+      color: rgba(255,255,255,.75);
+    }
+    .footerGrid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 14px;
+      align-items:start;
+    }
+    .footer a{color:rgba(255,255,255,.86)}
+    .tiny{font-size:.92rem;color: rgba(255,255,255,.66);font-weight:700}
+
+    /* Sticky bottom CTA */
+    .stickyCta{
+      position:fixed;left:0;right:0;bottom:12px;z-index:120;
+      display:flex;justify-content:center;
+      pointer-events:none;
+    }
+    .stickyCta .bar{
+      width:min(980px, 94vw);
+      padding:12px;
+      border-radius: 22px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(11,16,32,.72);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow2);
+      display:flex;gap:12px;align-items:center;justify-content:space-between;
+      pointer-events:auto;
+    }
+    .stickyCta strong{font-weight:900}
+    .stickyCta span{color:rgba(255,255,255,.72);font-weight:800}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero .wrap{grid-template-columns:1fr;gap:18px}
+      .downloaderGrid{grid-template-columns:1fr}
+      .featureExplorer{grid-template-columns:1fr}
+      .featureList{grid-template-columns:1fr}
+      .highlights{grid-template-columns: repeat(2, 1fr)}
       .shots{grid-template-columns: repeat(2, 1fr)}
-      .faq{grid-template-columns:1fr}
-      .nav-links{display:none}
-      .menu-btn{display:inline-grid;place-items:center}
-      .drawer{display:none}
-      .hero-bullets{grid-template-columns:1fr}
+      .footerGrid{grid-template-columns:1fr}
     }
-    @media (max-width: 540px){
-      .platforms{grid-template-columns: repeat(2, 1fr)}
+    @media (max-width: 760px){
+      .navlinks{display:none}
+      .hamburger{display:inline-flex}
       .shots{grid-template-columns: 1fr}
-      section{padding: var(--s7) 0}
-      .nav{height:68px}
-    }
-
-    @media (prefers-reduced-motion: reduce){
-      *{animation:none !important; transition:none !important; scroll-behavior:auto !important}
+      .highlights{grid-template-columns: 1fr}
     }
   </style>
 </head>
 
 <body>
-  <div class="bg-orbs" aria-hidden="true">
-    <div class="orb"></div><div class="orb"></div><div class="orb"></div>
-  </div>
-
-  <!-- HEADER -->
-  <header class="header">
+  <!-- Top nav -->
+  <div class="topbar">
     <div class="container">
-      <nav class="nav" aria-label="Primary">
-        <a class="brand" href="#top">
-          <span class="brand-badge" aria-hidden="true"><img src="logo.png" alt=""></span>
-          <span class="brand-name">Unisaver</span>
+      <div class="nav">
+        <a class="brand" href="#top" aria-label="Unisaver Home">
+          <div class="logo"><img src="logo.png" alt="Unisaver logo"></div>
+          <div>Unisaver</div>
         </a>
 
-        <div class="nav-links" aria-label="Sections">
-          <a href="#overview">Overview</a>
+        <div class="navlinks" aria-label="Primary navigation">
+          <a href="#app">App</a>
           <a href="#features">Features</a>
-          <a href="#toolkit">Toolkit</a>
-          <a href="#preview">Live Preview</a>
-          <a href="#screens">Screenshots</a>
+          <a href="#downloader">Web Downloader</a>
+          <a href="#screens">Screens</a>
+          <a href="#other">Other Apps</a>
           <a href="#faq">FAQ</a>
           <a href="#support">Support</a>
         </div>
 
-        <div class="nav-cta">
-          <a class="pill" href="#screens"><i class="fa-solid fa-images"></i> View screenshots</a>
-          <a class="pill primary" href="#getapp"><i class="fa-solid fa-bolt"></i> Get the app</a>
-          <button class="menu-btn" id="menuBtn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
-        </div>
-      </nav>
+        <div class="nav-right">
+          <a class="iconbtn" href="https://x.com/UnisaverApps?t=x5Clf26uHYckFyCPukXdEQ&s=09" target="_blank" rel="noopener" aria-label="Unisaver on X">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a class="iconbtn" href="https://whatsapp.com/channel/0029VbBBhUM7T8bgMHp4Oq3b" target="_blank" rel="noopener" aria-label="WhatsApp channel">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a class="iconbtn" href="https://t.me/unisaverdownloader" target="_blank" rel="noopener" aria-label="Telegram">
+            <i class="fa-brands fa-telegram"></i>
+          </a>
 
-      <div class="drawer" id="drawer">
-        <div class="drawer-inner">
-          <div class="drawer-grid">
-            <a href="#overview">Overview</a>
-            <a href="#features">Features</a>
-            <a href="#toolkit">Toolkit</a>
-            <a href="#preview">Live Preview</a>
-            <a href="#screens">Screenshots</a>
-            <a href="#faq">FAQ</a>
-            <a href="#support">Support</a>
-            <a href="#getapp">Get the app</a>
+          <button class="iconbtn hamburger" id="menuBtn" aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobileMenu" id="mobileMenu" aria-label="Mobile navigation">
+        <a href="#app">App</a>
+        <a href="#features">Features</a>
+        <a href="#downloader">Web Downloader</a>
+        <a href="#screens">Screens</a>
+        <a href="#other">Other Apps</a>
+        <a href="#faq">FAQ</a>
+        <a href="#support">Support</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero" id="top">
+    <div class="container">
+      <div class="wrap">
+        <div>
+          <div class="pill"><span class="dot"></span><span>Official Unisaver landing page</span></div>
+          <h1 class="headline">Download, organize & protect your media — the clean way.</h1>
+          <p class="lead">
+            Unisaver is an all-in-one media toolkit: download from social platforms and <strong>1000+ websites</strong>,
+            save WhatsApp/Business statuses, run speed tests, store links for later, browse with an ad-blocker,
+            use a dedicated VPN, and lock private files in a vault.
+          </p>
+
+          <div class="heroCtas" id="app">
+            <a class="btn primary" id="btnAndroid" href="https://play.google.com/store/apps/details?id=com.creed.unisaver" rel="noopener">
+              <i class="fa-brands fa-google-play"></i> Get on Android
+            </a>
+            <a class="btn" id="btniOS" href="https://apps.apple.com/app/unisaver/id6746811725" rel="noopener">
+              <i class="fa-brands fa-apple"></i> Download for iOS
+            </a>
+            <a class="btn ghost" href="#downloader">
+              <i class="fa-solid fa-bolt"></i> Try Web Downloader
+            </a>
+          </div>
+
+          <div class="heroMeta">
+            <div class="m"><i class="fa-solid fa-shield-halved"></i><span>Vault + privacy tools</span></div>
+            <div class="m"><i class="fa-solid fa-gauge-high"></i><span>Speed test built-in</span></div>
+            <div class="m"><i class="fa-solid fa-layer-group"></i><span>Batch + background</span></div>
+            <div class="m"><i class="fa-solid fa-wifi"></i><span>VPN + ad-block browser</span></div>
           </div>
         </div>
+
+        <div class="phoneCard" aria-label="App preview carousel">
+          <div class="phone" id="phone">
+            <div class="slide active"><img src="screenshoot1.png" alt="Unisaver screenshot 1" loading="lazy"></div>
+            <div class="slide"><img src="Screenshot2.png" alt="Unisaver screenshot 2" loading="lazy"></div>
+            <div class="slide"><img src="Screenshot3.png" alt="Unisaver screenshot 3" loading="lazy"></div>
+            <div class="slide"><img src="Screenshot4.png" alt="Unisaver screenshot 4" loading="lazy"></div>
+            <div class="slide"><img src="Screenshot5.png" alt="Unisaver screenshot 5" loading="lazy"></div>
+            <div class="slide"><img src="Screenshot6.png" alt="Unisaver screenshot 6" loading="lazy"></div>
+
+            <div class="sliderNav">
+              <button class="navBtn" id="prev" aria-label="Previous screenshot"><i class="fa-solid fa-chevron-left"></i></button>
+              <div class="dots" id="dots" aria-label="Carousel dots"></div>
+              <button class="navBtn" id="next" aria-label="Next screenshot"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+          </div>
+          <div class="phoneHint"><i class="fa-solid fa-hand-pointer"></i> Tap arrows or dots. Auto-plays while idle.</div>
+        </div>
+      </div>
+
+      <div class="grid highlights">
+        <div class="h"><strong>1000+</strong><span>Supported websites & sources</span></div>
+        <div class="h"><strong>HD</strong><span>Save in high quality (when available)</span></div>
+        <div class="h"><strong>Vault</strong><span>Lock private media safely</span></div>
+        <div class="h"><strong>Quick</strong><span>Instant downloader inside the app</span></div>
       </div>
     </div>
   </header>
 
-  <main id="top">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-grid">
+  <!-- Features (interactive explorer) -->
+  <section class="section" id="features">
+    <div class="container">
+      <h2 class="title">Everything inside Unisaver</h2>
+      <p class="subtitle">
+        Built as a complete toolkit: Quick Downloader, downloads from sites with no download button, status tools,
+        browsing hubs, VPN, speed test, link store, ad-block browser, file manager, and more.
+      </p>
+
+      <div class="featureExplorer">
+        <div class="card featureTabs" id="featureTabs">
+          <button class="tab active" data-key="download"><i class="fa-solid fa-download"></i> Downloading power</button>
+          <button class="tab" data-key="quick"><i class="fa-solid fa-bolt"></i> Quick Downloader</button>
+          <button class="tab" data-key="status"><i class="fa-brands fa-whatsapp"></i> Status + sharing</button>
+          <button class="tab" data-key="browser"><i class="fa-solid fa-globe"></i> Browser & sites hub</button>
+          <button class="tab" data-key="privacy"><i class="fa-solid fa-lock"></i> Vault & privacy</button>
+          <button class="tab" data-key="tools"><i class="fa-solid fa-screwdriver-wrench"></i> Extra tools</button>
+        </div>
+
+        <div class="card featurePanel" id="featurePanel">
+          <!-- JS fills this -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Web downloader -->
+  <section class="section tight" id="downloader">
+    <div class="container">
+      <h2 class="title">Quick Web Downloader (Bonus)</h2>
+      <p class="subtitle">
+        Paste a link and try a quick save. For the most reliable downloads, use the mobile app (better permissions + fewer browser limits).
+      </p>
+
+      <div class="downloaderGrid">
+        <div class="card dlCard" aria-live="polite">
+          <div class="modeRow">
+            <button class="mode active" id="modeVideo"><i class="fa-solid fa-video"></i> Video</button>
+            <button class="mode" id="modeAudio"><i class="fa-solid fa-music"></i> Audio</button>
+          </div>
+
+          <label class="sr-only" for="url">Media URL</label>
+          <input class="input" id="url" type="url" placeholder="Paste a link (social platforms + supported websites)..." autocomplete="off" />
+
+          <div class="rowBtns">
+            <button class="btn small" id="paste"><i class="fa-solid fa-clipboard"></i> Paste</button>
+            <button class="btn small" id="clear"><i class="fa-solid fa-trash"></i> Clear</button>
+            <button class="btn small primary" id="go"><i class="fa-solid fa-wand-magic-sparkles"></i> Find & Download</button>
+          </div>
+
+          <div class="progress" id="progress">
+            <div class="bar"><div class="fill" id="fill"></div></div>
+            <div class="ptext" id="ptext">Preparing…</div>
+          </div>
+
+          <div id="msg" class="msg" style="display:none"></div>
+
+          <div class="note">
+            Tip: some browsers block direct downloads from other domains (CORS). If you see “opened in new tab”, long-press / right-click → save.
+          </div>
+        </div>
+
+        <div class="card dlRight">
+          <div class="mini">
+            <h4 style="margin:0 0 6px"><i class="fa-solid fa-circle-check"></i> Best reliability</h4>
+            <p>Use the app for faster processing, background downloads, and fewer browser restrictions.</p>
+          </div>
+          <div class="mini">
+            <h4 style="margin:0 0 6px"><i class="fa-solid fa-shield"></i> Respect creators</h4>
+            <p>Only download content you own or have permission to save. Follow copyright and platform terms.</p>
+          </div>
+          <div class="mini">
+            <h4 style="margin:0 0 6px"><i class="fa-solid fa-link"></i> Link Store</h4>
+            <p>Inside the app you can save links for later, then download anytime with one tap.</p>
+          </div>
+
+          <!-- DICLOTRANS banner placement -->
+          <div style="margin-top:16px;display:flex;justify-content:center">
+            <div style="max-width:420px;width:100%">
+              <script type="text/javascript" src="https://cdn.diclotrans.com/sdk/v1/54204/ecad6b52059d10dfd47d723133d9b16512b93300/lib.js"></script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screens -->
+  <section class="section" id="screens">
+    <div class="container">
+      <h2 class="title">Live preview screenshots</h2>
+      <p class="subtitle">These are the images you said you want visible here (the ones that were below before).</p>
+
+      <div class="grid shots">
+        <div class="shot" data-img="image1.png" data-cap="Main dashboard">
+          <img src="image1.png" alt="Unisaver main dashboard">
+          <div class="cap">Main dashboard</div>
+        </div>
+        <div class="shot" data-img="image2.png" data-cap="Media hub / browsing">
+          <img src="image2.png" alt="Unisaver media hub">
+          <div class="cap">Media hub / browsing</div>
+        </div>
+        <div class="shot" data-img="image3.png" data-cap="Download manager">
+          <img src="image3.png" alt="Unisaver download manager">
+          <div class="cap">Download manager</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other apps -->
+  <section class="section tight" id="other">
+    <div class="container">
+      <h2 class="title">Other apps by Creed Productions</h2>
+      <p class="subtitle">
+        If you like Unisaver, you can also check these. (Pulled from your Play Store “More by Creed Productions”.)
+      </p>
+
+      <div class="grid" style="grid-template-columns:repeat(3,1fr);margin-top:22px">
+        <div class="card" style="padding:18px">
+          <div class="pill"><span class="dot"></span><span>Utility</span></div>
+          <h3 style="margin:10px 0 8px">Status Downloader</h3>
+          <p style="margin:0;color:rgba(255,255,255,.75);font-weight:700">
+            A dedicated status-focused app from your developer page.
+          </p>
+          <div style="margin-top:12px">
+            <a class="btn small" href="https://play.google.com/store/apps/dev?id=7834698733726409517" target="_blank" rel="noopener">
+              View on Play Store <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="card" style="padding:18px">
+          <div class="pill"><span class="dot"></span><span>Game</span></div>
+          <h3 style="margin:10px 0 8px">Guess Word: A hangman Game</h3>
+          <p style="margin:0;color:rgba(255,255,255,.75);font-weight:700">
+            Classic hangman gameplay with categories and improvements.
+          </p>
+          <div style="margin-top:12px">
+            <a class="btn small" href="https://play.google.com/store/apps/details?id=com.creed.guess_word" target="_blank" rel="noopener">
+              Open app page <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="card" style="padding:18px">
+          <div class="pill"><span class="dot"></span><span>Main</span></div>
+          <h3 style="margin:10px 0 8px">Unisaver: All Media Downloader</h3>
+          <p style="margin:0;color:rgba(255,255,255,.75);font-weight:700">
+            The flagship all-in-one downloader + vault + browser toolkit.
+          </p>
+          <div style="margin-top:12px">
+            <a class="btn small primary" href="https://play.google.com/store/apps/details?id=com.creed.unisaver" target="_blank" rel="noopener">
+              Install Unisaver <i class="fa-brands fa-google-play"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <p class="tiny" style="margin-top:12px">
+        Source: your Play Store developer listing shows Unisaver, Guess Word and Status Downloader. :contentReference[oaicite:1]{index=1}
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <h2 class="title">FAQ</h2>
+      <p class="subtitle">Fast answers to the common issues (including why web downloads sometimes fail).</p>
+
+      <div class="faq">
+        <div class="qa">
+          <div class="q">
+            <span>Why does the web downloader sometimes not download?</span>
+            <i class="fa-solid fa-chevron-down chev"></i>
+          </div>
+          <div class="a">
+            Browsers often block cross-domain downloads (CORS) or don’t allow saving files returned from certain servers.
+            That’s why the app is more reliable. On web, we fall back to opening in a new tab so you can save manually.
+          </div>
+        </div>
+
+        <div class="qa">
+          <div class="q">
+            <span>What does Unisaver do exactly?</span>
+            <i class="fa-solid fa-chevron-down chev"></i>
+          </div>
+          <div class="a">
+            Unisaver is an all-in-one downloader + media manager. It supports social platforms and 1000+ sites, status saving,
+            no-watermark options where possible, batch/background downloads, ad-block browser, VPN, speed test, link store,
+            vault/private folder, and more. :contentReference[oaicite:2]{index=2}
+          </div>
+        </div>
+
+        <div class="qa">
+          <div class="q">
+            <span>Can I host this site on GitHub and keep it free?</span>
+            <i class="fa-solid fa-chevron-down chev"></i>
+          </div>
+          <div class="a">
+            Yes. Put this file + your images in a GitHub repo and enable GitHub Pages. Or use Cloudflare Pages / Netlify for free static hosting.
+          </div>
+        </div>
+
+        <div class="qa">
+          <div class="q">
+            <span>How do I keep seller.json/config outside the HTML?</span>
+            <i class="fa-solid fa-chevron-down chev"></i>
+          </div>
+          <div class="a">
+            Put a <strong>config.json</strong> in your site root and load it on page start. (Steps are below this code.)
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="support">
+    <div class="container">
+      <div class="footerGrid">
         <div>
-          <div class="chip"><i class="fa-solid fa-circle-check"></i> Official Unisaver • iOS & Android</div>
-
-          <h1 class="h1">
-            The <span class="grad-text">all-in-one</span> media downloader & browser toolkit — built to feel premium.
-          </h1>
-
-          <p class="sub">
-            Unisaver helps you save and manage your media with a clean workflow: Quick Downloader for instant saves,
-            support for many platforms, downloads from websites that don’t show a download button, a Link Store to keep
-            links for later, HD status posting tools, internet speed testing, a dedicated VPN, and a modern ad-block browser
-            with top/bottom navigation.
+          <div class="pill"><span class="dot"></span><span>Support</span></div>
+          <h3 style="margin:12px 0 8px">Need help or brand assets?</h3>
+          <p style="margin:0;color:rgba(255,255,255,.75);font-weight:700">
+            Email us for press kits, logos, screenshots, or support.
+          </p>
+          <p style="margin:10px 0 0;font-weight:900">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:creedproduction4pps@gmail.com">creedproduction4pps@gmail.com</a>
           </p>
 
-          <div class="hero-actions" id="getapp">
-            <a class="store primary" id="btnIOS" href="https://apps.apple.com/app/unisaver/id6746811725" rel="noopener">
-              <img src="apple.png" alt="iOS"> Download for iOS
+          <p class="tiny" style="margin-top:12px">
+            Only download content you have rights to. Respect creators and platform terms.
+          </p>
+        </div>
+
+        <div>
+          <div class="pill"><span class="dot"></span><span>Links</span></div>
+          <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn small" href="https://play.google.com/store/apps/details?id=com.creed.unisaver" target="_blank" rel="noopener">
+              Android <i class="fa-brands fa-google-play"></i>
             </a>
-            <a class="store" id="btnAndroid" href="https://play.google.com/store/apps/details?id=com.creed.unisaver" rel="noopener">
-              <img src="play.png" alt="Android"> Get on Android
+            <a class="btn small" href="https://apps.apple.com/app/unisaver/id6746811725" target="_blank" rel="noopener">
+              iOS <i class="fa-brands fa-apple"></i>
             </a>
-            <a class="store" href="#toolkit"><i class="fa-solid fa-sparkles"></i> Explore features</a>
+            <a class="btn small" href="https://play.google.com/store/apps/dev?id=7834698733726409517" target="_blank" rel="noopener">
+              Developer Page <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
           </div>
 
-          <div class="hero-bullets" aria-label="Highlights">
-            <div class="bullet"><i class="fa-solid fa-bolt"></i><div><strong>Quick Downloader</strong><span>Instant saves with a fast, simple flow</span></div></div>
-            <div class="bullet"><i class="fa-solid fa-download"></i><div><strong>Hard sites supported</strong><span>Works with many pages that don’t show a download button</span></div></div>
-            <div class="bullet"><i class="fa-solid fa-wifi"></i><div><strong>Internet speed tester</strong><span>Measure speed & stability before large downloads</span></div></div>
-            <div class="bullet"><i class="fa-solid fa-shield-halved"></i><div><strong>Dedicated VPN</strong><span>Extra privacy for browsing and access</span></div></div>
-            <div class="bullet"><i class="fa-solid fa-store"></i><div><strong>Link Store</strong><span>Save links, organize them, revisit anytime</span></div></div>
-            <div class="bullet"><i class="fa-solid fa-shield"></i><div><strong>Ad-block browser</strong><span>Cleaner web with bottom + top navigation</span></div></div>
-          </div>
-
-          <div style="margin-top:22px">
-            <div class="kicker">popular sources</div>
-            <div class="platforms" aria-label="Supported sources (examples)">
-              <div class="plat"><i class="fa-solid fa-play"></i><span>Video sites</span></div>
-              <div class="plat"><i class="fa-solid fa-photo-film"></i><span>Social feeds</span></div>
-              <div class="plat"><i class="fa-solid fa-link"></i><span>Direct links</span></div>
-              <div class="plat"><i class="fa-solid fa-newspaper"></i><span>News pages</span></div>
-              <div class="plat"><i class="fa-solid fa-globe"></i><span>Web pages</span></div>
-              <div class="plat"><i class="fa-solid fa-cloud-arrow-down"></i><span>Media files</span></div>
-            </div>
-            <p style="margin:14px 0 0;color:var(--muted2);line-height:1.7;font-weight:750">
-              Use responsibly: only save content you have rights to access and download.
-            </p>
-          </div>
-        </div>
-
-        <!-- LIVE PREVIEW -->
-        <div class="preview" id="preview">
-          <div class="preview-top">
-            <div class="status"><span class="spark"></span> live preview</div>
-            <a class="mini-cta" href="#screens"><i class="fa-solid fa-expand"></i> full screenshots</a>
-          </div>
-
-          <div class="phone" aria-label="App screenshots carousel">
-            <div class="slides" id="slides">
-              <div class="slide active"><img src="screenshoot1.png" alt="Unisaver home"><div class="shade"></div></div>
-              <div class="slide"><img src="Screenshot2.png" alt="Quick downloader / download manager"><div class="shade"></div></div>
-              <div class="slide"><img src="Screenshot3.png" alt="Library and folders"><div class="shade"></div></div>
-              <div class="slide"><img src="Screenshot4.png" alt="Settings"><div class="shade"></div></div>
-              <div class="slide"><img src="Screenshot5.png" alt="Vault"><div class="shade"></div></div>
-              <div class="slide"><img src="Screenshot6.png" alt="VPN"><div class="shade"></div></div>
-            </div>
-
-            <div class="phone-controls">
-              <button class="iconbtn" id="prev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
-              <div class="dots" id="dots" aria-label="Carousel dots"></div>
-              <button class="iconbtn" id="next" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
-            </div>
-          </div>
-
-          <div class="preview-cards" aria-label="Preview cards">
-            <div class="pcard">
-              <strong><i class="fa-solid fa-bolt"></i> Quick Downloader</strong>
-              <small>Paste a link → detect media → save fast with fewer taps.</small>
-            </div>
-            <div class="pcard">
-              <strong><i class="fa-solid fa-compass"></i> Dedicated sites</strong>
-              <small>Built-in “easy browsing” pages so you can access popular sources quickly.</small>
-            </div>
-            <div class="pcard">
-              <strong><i class="fa-solid fa-signal"></i> Speed tester</strong>
-              <small>Check internet speed before big downloads and streaming.</small>
-            </div>
-            <div class="pcard">
-              <strong><i class="fa-solid fa-shield-halved"></i> VPN + Ad-block</strong>
-              <small>Cleaner web experience with bottom & top navigation controls.</small>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- OVERVIEW -->
-    <section id="overview">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="kicker">overview</div>
-            <div class="h2">Not just a downloader — a full media workflow.</div>
-          </div>
-          <p class="lead">
-            Unisaver is built like a toolkit: download, organize, store links, browse safely, test your internet,
-            and keep private media in a secure space. Everything is designed to be fast, clean, and easy to understand.
+          <p class="tiny" style="margin-top:14px">
+            © <span id="year"></span> Creed Productions. All rights reserved.
           </p>
         </div>
-
-        <div class="grid3">
-          <div class="card">
-            <div class="ico"><i class="fa-solid fa-bolt"></i></div>
-            <h3>Quick Downloader inside the app</h3>
-            <p>
-              A dedicated Quick Downloader view for instant saves: paste or share a link, preview media options,
-              then save with a smooth flow. Built to be fast when you’re in a hurry.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="ico"><i class="fa-solid fa-link"></i></div>
-            <h3>Link Store + smart organization</h3>
-            <p>
-              Save links for later, organize them, and revisit anytime. Great for “I’ll download later” workflows
-              and keeping important sources together (news, tutorials, media pages, etc.).
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="ico"><i class="fa-solid fa-lock"></i></div>
-            <h3>Private spaces + vault mindset</h3>
-            <p>
-              Keep sensitive content separate with a secure vault-style experience. Designed for privacy-first habits
-              and quick access when you need it.
-            </p>
-          </div>
-        </div>
       </div>
-    </section>
+    </div>
+  </footer>
 
-    <!-- FEATURES (DETAILED) -->
-    <section id="features">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="kicker">features</div>
-            <div class="h2">Everything Unisaver can do — fully detailed.</div>
-          </div>
-          <p class="lead">
-            Below is the “complete” picture: Quick Downloader, downloads from hard pages (no button),
-            internet tools, browsing tools, status tools, VPN tools, dedicated site shortcuts, and more.
-          </p>
-        </div>
-
-        <div class="tabs" id="toolkit">
-          <div class="tablist" role="tablist" aria-label="Feature tabs">
-            <button class="tabbtn active" data-tab="t1" role="tab" aria-selected="true">
-              <i class="fa-solid fa-bolt"></i>
-              <div>
-                <strong>Quick Downloader</strong>
-                <small>Instant saves • smooth paste/share flow • fewer taps</small>
-              </div>
-            </button>
-
-            <button class="tabbtn" data-tab="t2" role="tab" aria-selected="false">
-              <i class="fa-solid fa-download"></i>
-              <div>
-                <strong>Downloads from hard pages</strong>
-                <small>Works even when sites hide the download button</small>
-              </div>
-            </button>
-
-            <button class="tabbtn" data-tab="t3" role="tab" aria-selected="false">
-              <i class="fa-solid fa-globe"></i>
-              <div>
-                <strong>Ad-block browser</strong>
-                <small>Cleaner web • bottom + top navigation • easier browsing</small>
-              </div>
-            </button>
-
-            <button class="tabbtn" data-tab="t4" role="tab" aria-selected="false">
-              <i class="fa-solid fa-shield-halved"></i>
-              <div>
-                <strong>Dedicated VPN</strong>
-                <small>Extra privacy • safer browsing • quick on/off</small>
-              </div>
-            </button>
-
-            <button class="tabbtn" data-tab="t5" role="tab" aria-selected="false">
-              <i class="fa-solid fa-signal"></i>
-              <div>
-                <strong>Internet speed test</strong>
-                <small>Check speed & stability before big downloads</small>
-              </div>
-            </button>
-
-            <button class="tabbtn" data-tab="t6" role="tab" aria-selected="false">
-              <i class="fa-solid fa-store"></i>
-              <div>
-                <strong>Link Store + News + Tools</strong>
-                <small>Save links • revisit later • keep your sources organized</small>
-              </div>
-            </button>
-
-            <button class="tabbtn" data-tab="t7" role="tab" aria-selected="false">
-              <i class="fa-solid fa-circle-play"></i>
-              <div>
-                <strong>Status tools (HD)</strong>
-                <small>Status saving + HD status posting workflow</small>
-              </div>
-            </button>
-
-            <button class="tabbtn" data-tab="t8" role="tab" aria-selected="false">
-              <i class="fa-brands fa-whatsapp"></i>
-              <div>
-                <strong>WhatsApp tools</strong>
-                <small>Private linking/clone workflow + status handling</small>
-              </div>
-            </button>
-
-            <button class="tabbtn" data-tab="t9" role="tab" aria-selected="false">
-              <i class="fa-solid fa-compass"></i>
-              <div>
-                <strong>Dedicated sites hub</strong>
-                <small>Shortcuts for easy browsing inside the app</small>
-              </div>
-            </button>
-          </div>
-
-          <div class="panel" id="panel" role="tabpanel" aria-live="polite">
-            <div class="panel-top">
-              <div>
-                <div class="kicker" id="panelKicker">toolkit</div>
-                <div class="h2" id="panelTitle">Quick Downloader</div>
-                <p class="lead" id="panelText" style="margin-top:12px">
-                  Paste a link and get an instant, clean “save” flow. Quick Downloader is made for speed — fewer taps, clearer options.
-                </p>
-
-                <div class="tags" id="panelTags">
-                  <span class="tag"><i class="fa-solid fa-bolt"></i> instant</span>
-                  <span class="tag"><i class="fa-solid fa-layer-group"></i> organized</span>
-                  <span class="tag"><i class="fa-solid fa-wand-magic-sparkles"></i> clean UI</span>
-                </div>
-              </div>
-
-              <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
-                <a class="btn primary" href="#getapp"><i class="fa-solid fa-download"></i> Install app</a>
-                <a class="btn ghost" href="#screens"><i class="fa-solid fa-images"></i> See screenshots</a>
-              </div>
-            </div>
-
-            <div class="media" id="panelMedia" aria-label="Feature preview (click to zoom)">
-              <img id="panelImg" src="image1.png" alt="Feature preview">
-              <div class="overlay">
-                <div class="circle"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
-              </div>
-            </div>
-
-            <p style="margin:14px 0 0;color:var(--muted2);line-height:1.7;font-weight:750">
-              Note: Use Unisaver responsibly and only save content you have rights to access/download.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SCREENSHOTS -->
-    <section id="screens">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="kicker">screenshots</div>
-            <div class="h2">Screenshots that fit fully (no cropping).</div>
-          </div>
-          <p class="lead">
-            These cards use <strong>object-fit: contain</strong> so your screenshots are shown entirely.
-            Replace the images with your latest exports any time.
-          </p>
-        </div>
-
-        <div class="shots" aria-label="Screenshot gallery">
-          <article class="shot">
-            <div class="frame"><img src="screenshoot1.png" alt="Home / Dashboard"></div>
-            <div class="cap">
-              <div>
-                Home / Dashboard
-                <small>Quick access to tools + recent activity</small>
-              </div>
-              <button class="zoom" data-zoom="screenshoot1.png" aria-label="Zoom"><i class="fa-solid fa-expand"></i></button>
-            </div>
-          </article>
-
-          <article class="shot">
-            <div class="frame"><img src="Screenshot2.png" alt="Quick Downloader / Manager"></div>
-            <div class="cap">
-              <div>
-                Quick Downloader
-                <small>Instant save flow with cleaner steps</small>
-              </div>
-              <button class="zoom" data-zoom="Screenshot2.png" aria-label="Zoom"><i class="fa-solid fa-expand"></i></button>
-            </div>
-          </article>
-
-          <article class="shot">
-            <div class="frame"><img src="Screenshot3.png" alt="Library & Organize"></div>
-            <div class="cap">
-              <div>
-                Library & Organize
-                <small>Keep saved media tidy and searchable</small>
-              </div>
-              <button class="zoom" data-zoom="Screenshot3.png" aria-label="Zoom"><i class="fa-solid fa-expand"></i></button>
-            </div>
-          </article>
-
-          <article class="shot">
-            <div class="frame"><img src="Screenshot5.png" alt="Vault / Private"></div>
-            <div class="cap">
-              <div>
-                Vault / Private
-                <small>Separate sensitive media with privacy focus</small>
-              </div>
-              <button class="zoom" data-zoom="Screenshot5.png" aria-label="Zoom"><i class="fa-solid fa-expand"></i></button>
-            </div>
-          </article>
-
-          <article class="shot">
-            <div class="frame"><img src="Screenshot6.png" alt="VPN"></div>
-            <div class="cap">
-              <div>
-                Dedicated VPN
-                <small>Browse with extra privacy and safety</small>
-              </div>
-              <button class="zoom" data-zoom="Screenshot6.png" aria-label="Zoom"><i class="fa-solid fa-expand"></i></button>
-            </div>
-          </article>
-
-          <article class="shot">
-            <div class="frame"><img src="Screenshot4.png" alt="Settings"></div>
-            <div class="cap">
-              <div>
-                Settings & Tools
-                <small>Customize, manage, and keep it clean</small>
-              </div>
-              <button class="zoom" data-zoom="Screenshot4.png" aria-label="Zoom"><i class="fa-solid fa-expand"></i></button>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="kicker">faq</div>
-            <div class="h2">Quick answers (for trust & clarity).</div>
-          </div>
-          <p class="lead">Short + confident answers usually convert better on landing pages.</p>
-        </div>
-
-        <div class="faq">
-          <details>
-            <summary>Does Unisaver work on many platforms? <i class="fa-solid fa-plus"></i></summary>
-            <p>
-              Unisaver is designed to support a wide range of sources and link types, plus “hard pages” that don’t show a download button.
-              The in-app tools also include browsing, VPN, speed testing, and link storage.
-            </p>
-          </details>
-
-          <details>
-            <summary>What is Quick Downloader? <i class="fa-solid fa-plus"></i></summary>
-            <p>
-              A dedicated view inside the app for instant saves: paste/share a link, detect media options, and save with fewer taps.
-              Built for speed and clean UX.
-            </p>
-          </details>
-
-          <details>
-            <summary>Do you have an ad-block browser? <i class="fa-solid fa-plus"></i></summary>
-            <p>
-              Yes — a modern browser experience with ad-blocking and navigation controls (top and bottom) designed for easier browsing inside the app.
-            </p>
-          </details>
-
-          <details>
-            <summary>How do I add sellers.json for AdMob? <i class="fa-solid fa-plus"></i></summary>
-            <p>
-              Create a file named <strong>sellers.json</strong> in the same folder as this <strong>index.html</strong> (or place it in <strong>/.well-known/</strong>).
-              Then your URL becomes <strong>/sellers.json</strong> (or <strong>/.well-known/sellers.json</strong>) and you paste that into AdMob.
-            </p>
-          </details>
-
-          <details>
-            <summary>Is it okay to download anything? <i class="fa-solid fa-plus"></i></summary>
-            <p>
-              Use Unisaver responsibly. Only download or save content you have rights to access and keep. Respect creators and platform rules.
-            </p>
-          </details>
-
-          <details>
-            <summary>Where can I get support? <i class="fa-solid fa-plus"></i></summary>
-            <p>
-              Email <a href="mailto:creedproduction4pps@gmail.com">creedproduction4pps@gmail.com</a>. Include your device model and what happened (a screenshot helps).
-            </p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- SUPPORT -->
-    <section id="support">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="kicker">support</div>
-            <div class="h2">Fast support + community updates.</div>
-          </div>
-          <p class="lead">
-            Need help, press assets, or partnership requests? Reach out. Also follow the channels for updates and tips.
-          </p>
-        </div>
-
-        <div class="support">
-          <div class="box">
-            <h3>Support & Contact</h3>
-            <p>
-              For issues, feature requests, or press materials: email us and we’ll respond quickly.
-              Include your phone model + Android/iOS version, and what you were trying to do.
-            </p>
-
-            <div class="actions">
-              <a class="btn primary" href="mailto:creedproduction4pps@gmail.com?subject=Unisaver%20Support%20Request"><i class="fa-solid fa-envelope"></i> Email support</a>
-              <a class="btn ghost" href="https://docs.google.com/document/d/1nePcsitbVyAf2YcGDj8RXk3pMTLKE7-I9DZ9_62DwZw/edit?usp=sharing" target="_blank" rel="noopener"><i class="fa-solid fa-file-shield"></i> Privacy policy</a>
-            </div>
-
-            <div class="smallnote">
-              Tip: If a download fails, try on a different network, or use the VPN/speed test tools to check connectivity.
-            </div>
-          </div>
-
-          <div class="box">
-            <h3>Follow Unisaver</h3>
-            <p>Updates, tips, and feature drops across our channels.</p>
-            <div class="actions">
-              <a class="btn" href="https://x.com/UnisaverApps?t=x5Clf26uHYckFyCPukXdEQ&s=09" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i> X</a>
-              <a class="btn" href="https://whatsapp.com/channel/0029VbBBhUM7T8bgMHp4Oq3b" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-              <a class="btn" href="https://t.me/unisaverdownloader" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i> Telegram</a>
-            </div>
-
-            <div class="smallnote">
-              Want a “press kit” (logo, screenshots, brand colors)? Email us and we’ll send it.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="container foot">
-        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
-          <div style="width:42px;height:42px;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.14);background:var(--grad)">
-            <img src="logo.png" alt="Unisaver" style="width:100%;height:100%;object-fit:cover">
-          </div>
-          <div>
-            <strong style="color:rgba(236,243,255,.92)">Unisaver</strong>
-            <div style="margin-top:4px">Support: <a href="mailto:creedproduction4pps@gmail.com">creedproduction4pps@gmail.com</a></div>
-          </div>
-        </div>
-
-        <div class="social">
-          <a class="pill" href="https://x.com/UnisaverApps?t=x5Clf26uHYckFyCPukXdEQ&s=09" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i> X</a>
-          <a class="pill" href="https://whatsapp.com/channel/0029VbBBhUM7T8bgMHp4Oq3b" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-          <a class="pill" href="https://t.me/unisaverdownloader" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i> Telegram</a>
-          <a class="pill primary" href="#getapp"><i class="fa-solid fa-download"></i> Get the app</a>
-        </div>
-
-        <div style="flex-basis:100%;margin-top:10px;color:rgba(236,243,255,.55);font-weight:800">
-          © <span id="year"></span> Creed Production •
-          <a href="https://docs.google.com/document/d/1nePcsitbVyAf2YcGDj8RXk3pMTLKE7-I9DZ9_62DwZw/edit?usp=sharing" target="_blank" rel="noopener">Privacy Policy</a>
-        </div>
-      </div>
-    </footer>
-  </main>
-
-  <!-- STICKY CTA -->
-  <div class="sticky" id="sticky">
-    <div class="left">
-      <div class="logo"><img src="logo.png" alt=""></div>
+  <!-- Sticky CTA -->
+  <div class="stickyCta" aria-label="Sticky install bar">
+    <div class="bar">
       <div>
-        <strong>Install Unisaver</strong>
-        <small>Quick Downloader • ad-block • VPN • speed test • link store</small>
+        <strong>Unisaver</strong>
+        <span> — Get the full experience in the app</span>
       </div>
-    </div>
-    <div class="right">
-      <a class="btn primary" href="https://apps.apple.com/app/unisaver/id6746811725" rel="noopener"><i class="fa-brands fa-apple"></i> iOS</a>
-      <a class="btn" href="https://play.google.com/store/apps/details?id=com.creed.unisaver" rel="noopener"><i class="fa-brands fa-google-play"></i> Android</a>
-      <button class="btn close" id="closeSticky" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-    </div>
-  </div>
-
-  <!-- ZOOM MODAL -->
-  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Screenshot preview">
-    <div class="modal-card">
-      <div class="modal-top">
-        <strong>Preview</strong>
-        <button class="iconbtn" id="closeModal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-      </div>
-      <div class="modal-body">
-        <img id="modalImg" class="modal-img" src="" alt="Preview">
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end">
+        <a class="btn small primary" href="https://play.google.com/store/apps/details?id=com.creed.unisaver" target="_blank" rel="noopener">
+          Android
+        </a>
+        <a class="btn small" href="https://apps.apple.com/app/unisaver/id6746811725" target="_blank" rel="noopener">
+          iOS
+        </a>
       </div>
     </div>
   </div>
 
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-label="Screenshot preview">
+    <div class="lbWrap">
+      <button class="lbClose" id="lbClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      <img id="lbImg" src="" alt="Preview">
+    </div>
+  </div>
+
+  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -1347,191 +992,414 @@
   }
   </script>
 
+  <noscript>
+    <div class="container" style="padding:16px 18px 30px">
+      <div class="card" style="padding:16px;background:rgba(255,175,0,.06);border-color:rgba(255,175,0,.25)">
+        JavaScript is required for interactive parts and the web downloader. You can still install the app using the buttons above.
+      </div>
+    </div>
+  </noscript>
+
   <script>
-    // year
+    // ========= Config loader (optional) =========
+    // Put /config.json in your site root to override API.
+    // Example config.json:
+    // { "apiBase": "https://YOUR_BACKEND/api" }
+    const defaultApi = (document.querySelector('meta[name="unisaver-api"]')?.content || '').replace(/\/+$/,'');
+    let API_BASE = defaultApi || 'https://valid-jacquelin-unisaver-f6c7b6d7.koyeb.app/api';
+
+    (async function loadConfig(){
+      try{
+        const r = await fetch('./config.json', { cache: 'no-store' });
+        if(r.ok){
+          const cfg = await r.json();
+          if(cfg?.apiBase) API_BASE = String(cfg.apiBase).replace(/\/+$/,'');
+        }
+      }catch(e){}
+    })();
+
+    // ========= Year =========
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // mobile drawer
+    // ========= Mobile menu =========
     const menuBtn = document.getElementById('menuBtn');
-    const drawer = document.getElementById('drawer');
-    menuBtn?.addEventListener('click', () => {
-      const open = drawer.style.display === 'block';
-      drawer.style.display = open ? 'none' : 'block';
-    });
-    drawer?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => drawer.style.display = 'none'));
-
-    // smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const id = a.getAttribute('href');
-        if (!id || id === '#') return;
-        const el = document.querySelector(id);
-        if (el){
-          e.preventDefault();
-          el.scrollIntoView({behavior:'smooth', block:'start'});
-        }
-      })
-    });
-
-    // carousel
-    const slides = Array.from(document.querySelectorAll('.slide'));
-    const dotsWrap = document.getElementById('dots');
-    const prev = document.getElementById('prev');
-    const next = document.getElementById('next');
-    let idx = 0;
-    let auto;
-
-    function renderDots(){
-      dotsWrap.innerHTML = '';
-      slides.forEach((_, i)=>{
-        const d = document.createElement('div');
-        d.className = 'dot' + (i===idx ? ' active' : '');
-        d.addEventListener('click', ()=>go(i));
-        dotsWrap.appendChild(d);
+    const mobileMenu = document.getElementById('mobileMenu');
+    if(menuBtn){
+      menuBtn.addEventListener('click', ()=>{
+        const open = mobileMenu.style.display === 'block';
+        mobileMenu.style.display = open ? 'none' : 'block';
       });
+      mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=> mobileMenu.style.display='none'));
     }
-    function go(i){
-      slides[idx].classList.remove('active');
-      idx = (i + slides.length) % slides.length;
-      slides[idx].classList.add('active');
+
+    // ========= Smooth scroll =========
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        const id = a.getAttribute('href');
+        if(!id || id === '#') return;
+        const t = document.querySelector(id);
+        if(t){
+          e.preventDefault();
+          t.scrollIntoView({behavior:'smooth', block:'start'});
+        }
+      });
+    });
+
+    // ========= Phone carousel =========
+    (function phoneCarousel(){
+      const phone = document.getElementById('phone');
+      if(!phone) return;
+      const slides = Array.from(phone.querySelectorAll('.slide'));
+      const dotsWrap = document.getElementById('dots');
+      const prev = document.getElementById('prev');
+      const next = document.getElementById('next');
+
+      let idx = 0;
+      let timer = null;
+      const total = slides.length;
+
+      function renderDots(){
+        dotsWrap.innerHTML = '';
+        slides.forEach((_, i)=>{
+          const d = document.createElement('div');
+          d.className = 'dot' + (i===idx ? ' active' : '');
+          d.addEventListener('click', ()=>go(i, true));
+          dotsWrap.appendChild(d);
+        });
+      }
+
+      function go(i, user){
+        slides[idx].classList.remove('active');
+        idx = (i + total) % total;
+        slides[idx].classList.add('active');
+        renderDots();
+        if(user) restart();
+      }
+
+      function restart(){
+        if(timer) clearInterval(timer);
+        timer = setInterval(()=>go(idx+1,false), 4200);
+      }
+
+      prev?.addEventListener('click', ()=>go(idx-1,true));
+      next?.addEventListener('click', ()=>go(idx+1,true));
+
+      phone.addEventListener('mouseenter', ()=>{ if(timer) clearInterval(timer); });
+      phone.addEventListener('mouseleave', ()=>restart());
+
       renderDots();
-      restartAuto();
-    }
-    function restartAuto(){
-      clearInterval(auto);
-      auto = setInterval(()=>go(idx+1), 4200);
-    }
-    prev?.addEventListener('click', ()=>go(idx-1));
-    next?.addEventListener('click', ()=>go(idx+1));
-    renderDots();
-    restartAuto();
+      restart();
+    })();
 
-    // feature tabs (detailed)
-    const tabBtns = Array.from(document.querySelectorAll('.tabbtn'));
-    const panelKicker = document.getElementById('panelKicker');
-    const panelTitle = document.getElementById('panelTitle');
-    const panelText = document.getElementById('panelText');
-    const panelTags = document.getElementById('panelTags');
-    const panelImg = document.getElementById('panelImg');
-
-    const tabData = {
-      t1: {
-        kicker: "quick downloader",
-        title: "Quick Downloader (instant saves)",
-        text: "A dedicated Quick Downloader page for instant saves: paste/share a link, detect media options, then save with fewer taps. Designed to feel fast and clean.",
-        tags: ["instant", "fast flow", "clean UI", "quick access"],
-        img: "image1.png"
+    // ========= Feature explorer =========
+    const FEATURES = {
+      download: {
+        title: "Downloading power",
+        icon: "fa-download",
+        desc: "Save content from social platforms and 1000+ websites. Handles links even when a page has no visible download button.",
+        bullets: [
+          "Multi-platform saving (videos, reels, stories, photos & audio)",
+          "Works with many sites that hide downloads behind players",
+          "Batch downloads and download manager inside the app",
+          "Quality options when available (HD where supported)",
+          "Background downloads (keep using your phone)",
+          "Organize by folders, gallery, and categories"
+        ]
       },
-      t2: {
-        kicker: "hard pages",
-        title: "Downloads from sites without a download button",
-        text: "Unisaver is built to handle many pages where the download button is missing or hidden. The app focuses on detecting playable media and presenting a clean save workflow.",
-        tags: ["hard sites", "smart detection", "reliable workflow", "less friction"],
-        img: "image2.png"
+      quick: {
+        title: "Quick Downloader (instant mode)",
+        icon: "fa-bolt",
+        desc: "In-app quick tools for grabbing media fast: paste a link, share-to, or capture from the built-in browser.",
+        bullets: [
+          "Quick paste & download flow",
+          "Share link to Unisaver from other apps",
+          "Smart capture inside the built-in browser",
+          "Auto-detect media on pages",
+          "Link Store: save now, download later",
+          "Clean, fast UI designed for daily use"
+        ]
       },
-      t3: {
-        kicker: "browser",
-        title: "Ad-block browser (top + bottom navigation)",
-        text: "A modern in-app browser experience with ad-blocking and navigation controls at the top and bottom — built for easier browsing while you collect links and media.",
-        tags: ["ad-block", "bottom nav", "top nav", "clean web"],
-        img: "image3.png"
+      status: {
+        title: "Status + sharing tools",
+        icon: "fa-whatsapp",
+        desc: "Status saving, reposting, and HD status posting — plus compatibility for different WhatsApp variants.",
+        bullets: [
+          "WhatsApp status saving before it disappears",
+          "WhatsApp Business status support",
+          "HD status posting (reduce quality loss)",
+          "Repost/share saved statuses instantly",
+          "Private/secure status collection in vault",
+          "Designed for fast daily status workflows"
+        ]
       },
-      t4: {
-        kicker: "vpn",
-        title: "Dedicated VPN",
-        text: "A dedicated VPN tool for privacy and safer browsing on public networks. Useful when you want extra protection and stable browsing while using web features.",
-        tags: ["privacy", "one-tap", "safer browsing", "control"],
-        img: "image1.png"
+      browser: {
+        title: "Browser & sites hub",
+        icon: "fa-globe",
+        desc: "A built-in browser with ad-blocking and dedicated browsing hubs to make downloads easier.",
+        bullets: [
+          "Ad-block browser + pop-up protection",
+          "Dedicated sites hub for easier browsing",
+          "Works for pages with no obvious download link",
+          "Bookmarks + link store for quick access",
+          "Cleaner browsing experience with fewer distractions",
+          "Helpful for media discovery + quick saving"
+        ]
       },
-      t5: {
-        kicker: "internet tools",
-        title: "Internet speed tester",
-        text: "Check speed and stability before large downloads or heavy browsing. Helps you understand whether your network is ready for bigger tasks.",
-        tags: ["speed", "stability", "quick check", "smart decision"],
-        img: "image2.png"
+      privacy: {
+        title: "Vault & privacy",
+        icon: "fa-lock",
+        desc: "Lock important/private media and keep your collections organized and protected.",
+        bullets: [
+          "Private vault / hidden folder for sensitive files",
+          "Lock screen / password / privacy flow",
+          "Gallery & file manager tools",
+          "Separate “public” vs “private” collections",
+          "Better organization for big downloads",
+          "Designed for privacy-first media management"
+        ]
       },
-      t6: {
-        kicker: "link store",
-        title: "Link Store + News + utilities",
-        text: "Save links for later, keep important pages organized, and revisit them any time. Great for workflows where you collect first, then process later.",
-        tags: ["save links", "organize", "revisit", "workflow"],
-        img: "image3.png"
-      },
-      t7: {
-        kicker: "status tools",
-        title: "HD status posting & status saving tools",
-        text: "Built-in status tools: manage status-related media, save, and post in a higher quality workflow. Designed to reduce hassle and keep it organized.",
-        tags: ["HD workflow", "status tools", "organized", "simple steps"],
-        img: "image1.png"
-      },
-      t8: {
-        kicker: "whatsapp tools",
-        title: "WhatsApp tools (private linking/clone workflow)",
-        text: "Tools designed to help you manage WhatsApp-related workflows more privately, including status handling and organizing within the Unisaver toolset.",
-        tags: ["privacy", "status flow", "organized", "toolkit"],
-        img: "image2.png"
-      },
-      t9: {
-        kicker: "site hub",
-        title: "Dedicated sites hub for easy browsing",
-        text: "A hub of dedicated sites/shortcuts so you can jump to common sources quickly. Faster navigation, fewer steps.",
-        tags: ["shortcuts", "fast browsing", "easy access", "organized"],
-        img: "image3.png"
+      tools: {
+        title: "Extra tools (built-in)",
+        icon: "fa-screwdriver-wrench",
+        desc: "Utility tools that make Unisaver feel like a full toolkit, not just a downloader.",
+        bullets: [
+          "Internet speed tester",
+          "Dedicated VPN mode for safer browsing",
+          "News / updates hub (where available)",
+          "Link store for later downloads",
+          "Themes & dark mode feel",
+          "All-in-one convenience"
+        ]
       }
     };
 
-    function setTab(key){
-      tabBtns.forEach(b=>{
-        const on = b.dataset.tab === key;
-        b.classList.toggle('active', on);
-        b.setAttribute('aria-selected', on ? 'true' : 'false');
+    const featurePanel = document.getElementById('featurePanel');
+    function paintFeature(key){
+      const f = FEATURES[key] || FEATURES.download;
+      featurePanel.innerHTML = `
+        <div class="panelTop">
+          <div class="bigIcon"><i class="fa-solid ${f.icon}"></i></div>
+          <div>
+            <div style="font-weight:950;font-size:1.2rem">${f.title}</div>
+            <div style="color:rgba(255,255,255,.75);font-weight:800;margin-top:2px">${f.desc}</div>
+          </div>
+        </div>
+        <div class="featureList">
+          ${f.bullets.map(b=>`<div class="li"><i class="fa-solid fa-circle-check"></i><div>${b}</div></div>`).join('')}
+        </div>
+        <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn small primary" href="https://play.google.com/store/apps/details?id=com.creed.unisaver" target="_blank" rel="noopener">
+            Install on Android
+          </a>
+          <a class="btn small" href="https://apps.apple.com/app/unisaver/id6746811725" target="_blank" rel="noopener">
+            Download on iOS
+          </a>
+        </div>
+      `;
+    }
+
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(t=>{
+      t.addEventListener('click', ()=>{
+        tabs.forEach(x=>x.classList.remove('active'));
+        t.classList.add('active');
+        paintFeature(t.dataset.key);
       });
-      const d = tabData[key];
-      panelKicker.textContent = d.kicker;
-      panelTitle.textContent = d.title;
-      panelText.textContent = d.text;
-      panelTags.innerHTML = d.tags.map(t=>`<span class="tag"><i class="fa-solid fa-sparkles"></i> ${t}</span>`).join("");
-      panelImg.src = d.img;
-      panelImg.alt = d.title;
-    }
-    tabBtns.forEach(btn => btn.addEventListener('click', ()=>setTab(btn.dataset.tab)));
-    setTab('t1');
+    });
+    paintFeature('download');
 
-    // zoom modal (screenshots + panel media)
-    const modal = document.getElementById('modal');
-    const closeModal = document.getElementById('closeModal');
-    const modalImg = document.getElementById('modalImg');
-
-    function openModal(src){
-      modalImg.src = src;
-      modal.classList.add('open');
-    }
-    function shut(){
-      modal.classList.remove('open');
-      modalImg.src = '';
-    }
-    closeModal.addEventListener('click', shut);
-    modal.addEventListener('click', (e)=>{ if(e.target === modal) shut(); });
-    window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') shut(); });
-
-    document.querySelectorAll('.zoom').forEach(btn=>{
-      btn.addEventListener('click', ()=>openModal(btn.getAttribute('data-zoom')));
+    // ========= FAQ accordion =========
+    document.querySelectorAll('.qa .q').forEach(q=>{
+      q.addEventListener('click', ()=>{
+        const box = q.closest('.qa');
+        box.classList.toggle('open');
+      });
     });
 
-    document.getElementById('panelMedia').addEventListener('click', ()=>openModal(panelImg.src));
+    // ========= Screenshot lightbox =========
+    const lightbox = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lbImg');
+    const lbClose = document.getElementById('lbClose');
 
-    // sticky close
-    const sticky = document.getElementById('sticky');
-    document.getElementById('closeSticky').addEventListener('click', ()=>sticky.classList.add('hidden'));
+    document.querySelectorAll('.shot').forEach(s=>{
+      s.addEventListener('click', ()=>{
+        const src = s.getAttribute('data-img');
+        lbImg.src = src;
+        lightbox.classList.add('open');
+      });
+    });
+    lbClose.addEventListener('click', ()=> lightbox.classList.remove('open'));
+    lightbox.addEventListener('click', (e)=>{ if(e.target === lightbox) lightbox.classList.remove('open'); });
 
-    // highlight platform store button based on device
-    (function(){
-      const ua = navigator.userAgent || "";
+    // ========= Web Downloader =========
+    const els = {
+      url: document.getElementById('url'),
+      modeVideo: document.getElementById('modeVideo'),
+      modeAudio: document.getElementById('modeAudio'),
+      paste: document.getElementById('paste'),
+      clear: document.getElementById('clear'),
+      go: document.getElementById('go'),
+      msg: document.getElementById('msg'),
+      progress: document.getElementById('progress'),
+      fill: document.getElementById('fill'),
+      ptext: document.getElementById('ptext'),
+    };
+
+    let audioOnly = false;
+    let aborter = null;
+
+    function showMsg(type, text){
+      els.msg.style.display = 'flex';
+      els.msg.className = 'msg ' + (type || '');
+      els.msg.innerHTML = `<i class="fa-solid ${type==='error'?'fa-triangle-exclamation':type==='success'?'fa-circle-check':'fa-circle-info'}"></i><div>${text}</div>`;
+    }
+    function hideMsg(){ els.msg.style.display = 'none'; els.msg.innerHTML=''; }
+    function setProg(on, pct, text){
+      els.progress.style.display = on ? 'block' : 'none';
+      if(on){
+        els.fill.style.width = `${Math.max(0, Math.min(100, pct||0))}%`;
+        els.ptext.textContent = text || 'Working…';
+      }
+    }
+
+    function isProbablyUrl(s){
+      if(!s) return false;
+      const x = s.trim();
+      if(!/^https?:\/\//i.test(x)) return false;
+      return x.length > 12;
+    }
+
+    function setMode(isAudio){
+      audioOnly = !!isAudio;
+      els.modeVideo.classList.toggle('active', !audioOnly);
+      els.modeAudio.classList.toggle('active', audioOnly);
+      showMsg('info', audioOnly ? 'Audio mode enabled.' : 'Video mode enabled.');
+      setTimeout(()=>hideMsg(), 1400);
+    }
+
+    els.modeVideo.addEventListener('click', ()=>setMode(false));
+    els.modeAudio.addEventListener('click', ()=>setMode(true));
+
+    els.clear.addEventListener('click', ()=>{
+      els.url.value = '';
+      hideMsg();
+      setProg(false);
+      if(aborter) aborter.abort();
+      aborter = null;
+      showMsg('info','Ready for a new link.');
+      setTimeout(()=>hideMsg(), 1400);
+    });
+
+    els.paste.addEventListener('click', async ()=>{
+      try{
+        const t = (await navigator.clipboard.readText()).trim();
+        if(isProbablyUrl(t)){
+          els.url.value = t;
+          showMsg('success','Pasted! Tap “Find & Download”.');
+        } else {
+          showMsg('error','Clipboard does not look like a valid link.');
+        }
+      }catch(e){
+        showMsg('error','Clipboard not allowed. Paste manually (Ctrl/Cmd + V).');
+      }
+    });
+
+    async function triggerDownloadFromUrl(downloadUrl, filename){
+      // Browser-safe approach: open in new tab as fallback if blob fails.
+      try{
+        const a = document.createElement('a');
+        a.href = downloadUrl;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        if(filename) a.download = filename;
+        a.style.display='none';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      }catch(e){
+        window.open(downloadUrl, '_blank', 'noopener,noreferrer');
+      }
+    }
+
+    els.go.addEventListener('click', async ()=>{
+      const url = els.url.value.trim();
+      if(!isProbablyUrl(url)){
+        showMsg('error','Paste a valid link that starts with http:// or https://');
+        els.url.focus();
+        return;
+      }
+
+      if(aborter) aborter.abort();
+      aborter = new AbortController();
+
+      hideMsg();
+      setProg(true, 10, 'Contacting server…');
+
+      try{
+        // IMPORTANT: if download fails on web, it's often CORS on the returned media URL.
+        const res = await fetch(`${API_BASE}/download`, {
+          method:'POST',
+          headers:{'Content-Type':'application/json', 'Accept':'application/json'},
+          body: JSON.stringify({ url, audio_only: audioOnly, quality: audioOnly ? 'audio' : 'hd' }),
+          signal: aborter.signal
+        });
+
+        if(!res.ok){
+          let msg = `Server error (${res.status})`;
+          try{
+            const j = await res.json();
+            msg = j.message || j.error || msg;
+          }catch(e){}
+          throw new Error(msg);
+        }
+
+        const data = await res.json();
+        if(!data?.success) throw new Error(data?.message || data?.error || 'Failed to process link');
+        if(!data?.data?.url) throw new Error('No downloadable media found for that link');
+
+        setProg(true, 35, 'Media found — starting download…');
+        showMsg('success', 'Media found. Opening download…');
+
+        const downloadUrl = data.data.url || data.data.download_url || data.data.downloadUrl;
+        const filename = data.data.filename || data.data.title || (audioOnly ? 'unisaver-audio.mp3' : 'unisaver-video.mp4');
+
+        // Try: open download URL (most reliable across browsers)
+        await triggerDownloadFromUrl(downloadUrl, filename);
+
+        setProg(true, 100, 'Done (if it opened a tab, save manually).');
+        setTimeout(()=>setProg(false), 1800);
+
+      }catch(err){
+        if(err?.name === 'AbortError'){
+          showMsg('info','Cancelled.');
+          setProg(false);
+          return;
+        }
+        showMsg('error', `${err.message || 'Download failed.'} Try again, or use the mobile app for best reliability.`);
+        setProg(false);
+      }finally{
+        aborter = null;
+      }
+    });
+
+    // ========= iOS/Android CTA emphasis =========
+    (function emphasizeStore(){
+      const ua = navigator.userAgent || '';
       const isiOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
       const isAndroid = /Android/i.test(ua);
-      if (isiOS) document.getElementById('btnIOS')?.classList.add('primary');
-      if (isAndroid) document.getElementById('btnAndroid')?.classList.add('primary');
+      if(isAndroid){
+        document.getElementById('btnAndroid')?.classList.add('primary');
+      }
+      if(isiOS){
+        document.getElementById('btniOS')?.classList.add('primary');
+      }
     })();
+
+    // ========= global safety =========
+    window.addEventListener('unhandledrejection', (event) => {
+      console.error('Unhandled promise rejection:', event.reason);
+      event.preventDefault();
+    });
   </script>
 </body>
 </html>
