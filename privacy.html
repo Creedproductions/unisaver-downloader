@@ -1,0 +1,1433 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Privacy Policy - Unisaver</title>
+  <meta name="description" content="Privacy Policy for Unisaver - Your privacy is our priority" />
+  <link rel="canonical" href="https://creedproductions.github.io/unisaver-downloader/privacy" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="logo.png" />
+  <link rel="apple-touch-icon" href="logo.png" sizes="180x180" />
+  <meta name="theme-color" content="#2563eb" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    :root {
+      --primary-600: #2563eb;
+      --primary-700: #1d4ed8;
+      --primary-50: #eff6ff;
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-300: #d1d5db;
+      --gray-600: #4b5563;
+      --gray-700: #374151;
+      --gray-800: #1f2937;
+      --gray-900: #111827;
+      
+      --bg-primary: #ffffff;
+      --bg-secondary: #f9fafb;
+      --text-primary: #111827;
+      --text-secondary: #4b5563;
+      --border-color: #e5e7eb;
+      
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    [data-theme="dark"] {
+      --bg-primary: #0f172a;
+      --bg-secondary: #1e293b;
+      --text-primary: #f1f5f9;
+      --text-secondary: #cbd5e1;
+      --border-color: #334155;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background: var(--bg-primary);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+    }
+
+    [data-theme="dark"] .navbar {
+      background: rgba(15, 23, 42, 0.8);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 800;
+      font-size: 1.125rem;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    .nav-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+
+    .nav-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .theme-toggle {
+      position: relative;
+      width: 56px;
+      height: 28px;
+      background: var(--gray-200);
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      border: 2px solid var(--border-color);
+    }
+
+    [data-theme="dark"] .theme-toggle {
+      background: var(--gray-700);
+    }
+
+    .theme-toggle-slider {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 20px;
+      height: 20px;
+      background: #ffffff;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .theme-toggle-slider i {
+      font-size: 10px;
+      color: var(--primary-600);
+    }
+
+    [data-theme="dark"] .theme-toggle-slider {
+      transform: translateX(28px);
+    }
+
+    .header {
+      padding: 4rem 0 2rem;
+      text-align: center;
+      background: linear-gradient(to bottom, var(--primary-50) 0%, var(--bg-primary) 100%);
+    }
+
+    [data-theme="dark"] .header {
+      background: linear-gradient(to bottom, rgba(37, 99, 235, 0.1) 0%, var(--bg-primary) 100%);
+    }
+
+    .header-title {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+    }
+
+    .header-subtitle {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.5rem;
+    }
+
+    .header-date {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    .content {
+      padding: 3rem 0;
+    }
+
+    .toc {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .toc-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+    }
+
+    .toc-list {
+      list-style: none;
+    }
+
+    .toc-list li {
+      margin-bottom: 0.5rem;
+    }
+
+    .toc-list a {
+      color: var(--primary-600);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .toc-list a:hover {
+      color: var(--primary-700);
+      text-decoration: underline;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section-title {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+      padding-top: 1rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .section p {
+      margin-bottom: 1rem;
+      color: var(--text-secondary);
+    }
+
+    .section ul, .section ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--text-secondary);
+    }
+
+    .section li {
+      margin-bottom: 0.5rem;
+    }
+
+    .highlight {
+      background: var(--primary-50);
+      border-left: 4px solid var(--primary-600);
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 0.5rem;
+    }
+
+    [data-theme="dark"] .highlight {
+      background: rgba(37, 99, 235, 0.1);
+    }
+
+    .highlight p {
+      margin: 0;
+    }
+
+    .privacy-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #10b981;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+
+    strong {
+      color: var(--text-primary);
+      font-weight: 700;
+    }
+
+    .footer {
+      background: var(--gray-900);
+      color: var(--gray-300);
+      padding: 3rem 0 2rem;
+      margin-top: 4rem;
+      text-align: center;
+    }
+
+    .footer p {
+      font-size: 0.875rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-link {
+      color: var(--primary-600);
+      text-decoration: none;
+    }
+
+    .footer-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .header-title {
+        font-size: 2rem;
+      }
+      
+      .section-title {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-container">
+        <a href="index.html" class="nav-brand">
+          <div class="nav-logo">
+            <img src="logo.png" alt="Unisaver">
+          </div>
+          Unisaver
+        </a>
+
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <div class="theme-toggle-slider">
+            <i class="fa-solid fa-sun"></i>
+          </div>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="privacy-badge">
+        <i class="fa-solid fa-shield-halved"></i>
+        <span>Privacy First</span>
+      </div>
+      <h1 class="header-title">Privacy Policy</h1>
+      <p class="header-subtitle">Your Privacy is Our Priority</p>
+      <p class="header-date">Effective Date: February 24, 2025 • Last Updated: February 14, 2026</p>
+      <p class="header-date">Contact: creedproduction4pps@gmail.com</p>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <div class="content">
+    <div class="container">
+      <!-- Table of Contents -->
+      <div class="toc">
+        <h2 class="toc-title">Table of Contents</h2>
+        <ol class="toc-list">
+          <li><a href="#introduction">1. Introduction</a></li>
+          <li><a href="#storage">2. Information Storage and Collection</a></li>
+          <li><a href="#not-collect">3. What We Do NOT Collect</a></li>
+          <li><a href="#usage">4. How We Use Information</a></li>
+          <li><a href="#security">5. Data Security and Protection</a></li>
+          <li><a href="#third-party">6. Third-Party Services</a></li>
+          <li><a href="#tracking">7. App Tracking Transparency and Your Choices</a></li>
+          <li><a href="#retention">8. Data Retention and Your Control</a></li>
+          <li><a href="#copyright">9. Copyright and User Responsibilities</a></li>
+          <li><a href="#children">10. Children's Privacy</a></li>
+          <li><a href="#rights">11. Your Privacy Rights</a></li>
+          <li><a href="#international">12. International Considerations</a></li>
+          <li><a href="#changes">13. Changes to This Policy</a></li>
+          <li><a href="#contact">14. Contact Information</a></li>
+        </ol>
+      </div>
+
+      <!-- Section 1: Introduction -->
+      <div class="section" id="introduction">
+        <h2 class="section-title">1. Introduction</h2>
+        
+        <p>Welcome to Unisaver. We are committed to protecting your privacy and being transparent about how we handle information. Unisaver is designed as a privacy-focused media management application that helps you save, organize, and access content for offline viewing.</p>
+
+        <h3 class="section-subtitle">Our Philosophy</h3>
+        <p>Privacy is fundamental to how we built Unisaver. Unlike many applications, we designed Unisaver to operate primarily on your device, with minimal data collection. We believe you should have complete control over your media and personal information.</p>
+
+        <div class="highlight">
+          <p><strong>Our Core Principle:</strong> Your data stays on your device. We don't collect, store, or have access to your downloaded media, viewing habits, or personal usage patterns. Your privacy is not a feature—it's our foundation.</p>
+        </div>
+
+        <h3 class="section-subtitle">What This Policy Covers</h3>
+        <p>This privacy policy describes our practices regarding information handling when you use the Unisaver application. It explains:</p>
+        <ul>
+          <li>What information stays on your device</li>
+          <li>What limited information we may receive</li>
+          <li>How we protect your privacy</li>
+          <li>Your rights and control over your data</li>
+          <li>How third-party services operate within the app</li>
+        </ul>
+
+        <h3 class="section-subtitle">Your Consent</h3>
+        <p>By downloading, installing, or using Unisaver, you acknowledge that you have read and understood this privacy policy and agree to its terms. If you do not agree with any part of this policy, please discontinue use of the application.</p>
+      </div>
+
+      <!-- Section 2: Information Storage and Collection -->
+      <div class="section" id="storage">
+        <h2 class="section-title">2. Information Storage and Collection</h2>
+        
+        <p>Unisaver operates on a local-storage model, meaning nearly all of your data remains on your device. Here's a comprehensive breakdown of what information is involved and where it's stored:</p>
+
+        <h3 class="section-subtitle">2.1 Local Device Storage (Not Accessible to Us)</h3>
+        <p>All of the following information is stored exclusively within your device's application sandbox and is <strong>never transmitted to our servers</strong>:</p>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Downloaded Media Files</h4>
+        <ul>
+          <li>All media content you save through Unisaver remains on your device</li>
+          <li>File formats may include videos, images, audio files, and documents</li>
+          <li>File metadata such as:
+            <ul style="margin-top: 0.5rem;">
+              <li>File name, size, and format</li>
+              <li>Resolution and duration (for video/audio)</li>
+              <li>Original source URL or reference (stored locally only for your reference)</li>
+              <li>Download date and time stamps</li>
+              <li>File location within your device storage</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Organizational Data</h4>
+        <ul>
+          <li>Custom folders, categories, and collections you create</li>
+          <li>Tags and labels you assign to files</li>
+          <li>Sort preferences (by name, date, size, type)</li>
+          <li>Viewing history within the app</li>
+          <li>Favorites and bookmarks</li>
+          <li>Playlists or grouped content arrangements</li>
+          <li>Vault organization and security settings</li>
+        </ul>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Application Settings and Preferences</h4>
+        <ul>
+          <li>Theme selection (dark mode, light mode, custom themes)</li>
+          <li>Language preference for the app interface</li>
+          <li>Download quality settings (resolution, compression preferences)</li>
+          <li>Storage location preferences</li>
+          <li>Notification settings and preferences</li>
+          <li>Auto-download configurations</li>
+          <li>Battery-saving mode preferences</li>
+          <li>Network usage settings (WiFi-only downloads, cellular data limits)</li>
+          <li>Privacy settings (vault PIN, biometric authentication)</li>
+          <li>Browser settings (ad-blocking, pop-up blocking)</li>
+        </ul>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Browser and Navigation Data</h4>
+        <ul>
+          <li>Browsing history within the app's browser (stored locally only)</li>
+          <li>Bookmarks and saved sites</li>
+          <li>Website cookies (stored in app sandbox, isolated from other apps)</li>
+          <li>Cached website data for faster loading</li>
+          <li>Tab management data</li>
+        </ul>
+
+        <div class="highlight">
+          <p><strong>What This Means for Your Privacy:</strong> Because all of this data is stored locally in your device's secure application sandbox:</p>
+          <ul style="margin-top: 0.5rem; margin-bottom: 0;">
+            <li>We cannot access, view, or monitor your downloaded content</li>
+            <li>Your media library is completely private</li>
+            <li>No information about what you download is transmitted to us</li>
+            <li>Your organizational structure and preferences remain on your device only</li>
+            <li>We have no knowledge of your browsing history or viewing habits</li>
+            <li>Your vault contents are encrypted and inaccessible to anyone but you</li>
+          </ul>
+        </div>
+
+        <h3 class="section-subtitle">2.2 Technical Information (Anonymous and Aggregated)</h3>
+        <p>To maintain and improve Unisaver's functionality, we may receive limited, anonymous technical information. This data cannot be linked to individual users:</p>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Crash and Error Reports</h4>
+        <p>If the app experiences a crash or error, anonymous diagnostic data may be sent to help us identify and fix issues:</p>
+        <ul>
+          <li>Type of error or crash encountered</li>
+          <li>Device type and operating system version</li>
+          <li>App version number</li>
+          <li>Time of occurrence</li>
+          <li>What action was being performed when the error occurred (e.g., "downloading from Instagram" but NOT the specific content)</li>
+          <li>Stack traces and debug logs (containing no personal information)</li>
+        </ul>
+        <p><strong>Important:</strong> This information does not identify you personally and does not include any details about your downloaded content, the specific URLs you accessed, or your media library.</p>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Basic Installation Metrics</h4>
+        <p>We receive anonymized information about:</p>
+        <ul>
+          <li>Total number of app installations (from app store platforms)</li>
+          <li>Basic device category (phone vs tablet)</li>
+          <li>Operating system type and version</li>
+          <li>Geographic region (country level only, for localization purposes)</li>
+          <li>App version being used</li>
+        </ul>
+        <p>These metrics help us understand our user base and prioritize which devices and regions to support, but they cannot be linked to individual users or specific devices.</p>
+
+        <h3 class="section-subtitle">2.3 Information You Voluntarily Provide</h3>
+        
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Support Communications</h4>
+        <p>If you contact us for help or to provide feedback, you may choose to share:</p>
+        <ul>
+          <li>Your email address or social media handle</li>
+          <li>Description of your technical issue or suggestion</li>
+          <li>Screenshots or screen recordings (if you choose to provide them for troubleshooting)</li>
+          <li>Device model, operating system version, and app version (for technical support)</li>
+        </ul>
+        <p><strong>Purpose and Retention:</strong> This information is used solely to respond to your specific inquiry and provide support. We retain support communications for a reasonable period to track ongoing issues and improve our support quality, typically not exceeding 12 months unless an issue remains unresolved.</p>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Surveys and Feedback Forms</h4>
+        <p>Occasionally, we may invite users to participate in optional surveys or feedback forms to help improve Unisaver. Any information provided through these channels is voluntary, and you can choose to provide as much or as little information as you wish.</p>
+
+        <h3 class="section-subtitle">2.4 Advertising-Related Information and Device Identifiers</h3>
+        <p>To support free access to Unisaver, we display advertisements. Advertising partners may collect certain information through their own technologies:</p>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Device Identifiers and Tracking Data</h4>
+        <ul>
+          <li>Device identifiers (such as Apple's IDFA or Google's Advertising ID)</li>
+          <li>General device information (model, OS version)</li>
+          <li>Ad interaction data (impressions, clicks, engagement)</li>
+          <li>General location information (country or city level only)</li>
+        </ul>
+
+        <div class="highlight">
+          <p><strong>Important Note About Tracking:</strong> In accordance with Apple's App Tracking Transparency framework, we request your permission before accessing your device's advertising identifier or collecting data that may be used to track you across apps and websites. You can control this permission through your device settings or when prompted by the app.</p>
+        </div>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">What "Tracking" Means</h4>
+        <p>Tracking refers to the linking of data collected from our app about you or your device (such as identifiers, usage data, or device information) with data collected from other companies' apps or websites for targeted advertising purposes or advertising measurement. It also includes sharing your data with data brokers.</p>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">What Ad Networks Do NOT Receive From Us</h4>
+        <ul>
+          <li>Your downloaded content or media files</li>
+          <li>Your personal information or email address</li>
+          <li>Your specific app usage patterns or viewing history</li>
+          <li>Your organizational data or preferences</li>
+          <li>Your browsing history within the app</li>
+          <li>The specific websites or platforms you download from</li>
+        </ul>
+        <p>Advertising networks operate independently with their own privacy policies. We recommend reviewing the privacy policies of major mobile advertising platforms to understand their practices.</p>
+      </div>
+
+      <!-- Section 3: What We Do NOT Collect -->
+      <div class="section" id="not-collect">
+        <h2 class="section-title">3. What We Do NOT Collect</h2>
+        
+        <p>It's equally important to be clear about what we do NOT collect. Unisaver is designed to respect your privacy, and we intentionally avoid collecting many types of information that other apps routinely gather.</p>
+
+        <h3 class="section-subtitle">3.1 Personal Identifying Information</h3>
+        <p>We DO NOT collect:</p>
+        <ul>
+          <li>Full name, address, or phone number</li>
+          <li>Email address (unless you voluntarily provide it for support)</li>
+          <li>Social security number or government identification</li>
+          <li>Financial information (credit cards, bank accounts, payment methods)</li>
+          <li>Login credentials or passwords</li>
+          <li>Biometric data (fingerprints, face scans, voice recordings)</li>
+          <li>Date of birth or age</li>
+          <li>Gender, race, ethnicity, or other demographic information</li>
+        </ul>
+
+        <h3 class="section-subtitle">3.2 Content and Usage Information</h3>
+        <p>We DO NOT collect:</p>
+        <ul>
+          <li>The actual content of your downloaded media files</li>
+          <li>What specific content you save or view</li>
+          <li>How often you access particular files</li>
+          <li>Your viewing or listening history</li>
+          <li>Search queries within the app</li>
+          <li>Time spent viewing specific content</li>
+          <li>Your content preferences or interests</li>
+          <li>The URLs or links you download from</li>
+          <li>The platforms you use most frequently</li>
+          <li>Your download patterns or habits</li>
+        </ul>
+
+        <h3 class="section-subtitle">3.3 Location and Tracking Data</h3>
+        <p>We DO NOT collect:</p>
+        <ul>
+          <li>Precise GPS location</li>
+          <li>Location history or movement patterns</li>
+          <li>IP addresses for user tracking purposes</li>
+          <li>Device serial numbers for tracking</li>
+          <li>Unique identifiers that could be used to track you across apps (except with explicit permission as required by the App Tracking Transparency framework)</li>
+          <li>WiFi network names or MAC addresses</li>
+          <li>Bluetooth beacons or proximity data</li>
+          <li>Behavioral profiles or user profiles</li>
+        </ul>
+
+        <h3 class="section-subtitle">3.4 Social and Communication Data</h3>
+        <p>We DO NOT collect:</p>
+        <ul>
+          <li>Contacts list from your device</li>
+          <li>Social media profiles or connections</li>
+          <li>Messages or communications</li>
+          <li>Calendar or scheduling information</li>
+          <li>Photos from your device gallery (beyond what you explicitly save in Unisaver)</li>
+          <li>Call logs or SMS messages</li>
+          <li>Email content or metadata</li>
+        </ul>
+
+        <h3 class="section-subtitle">3.5 Device Access</h3>
+        <p>We DO NOT collect:</p>
+        <ul>
+          <li>Microphone recordings (except when you explicitly use voice features)</li>
+          <li>Camera access (except when you explicitly use it within the app)</li>
+          <li>Other apps installed on your device</li>
+          <li>Files outside of Unisaver's storage area</li>
+          <li>System settings or configurations</li>
+          <li>Keyboard input or typing patterns</li>
+          <li>Screen recording or screenshots</li>
+        </ul>
+
+        <h3 class="section-subtitle">3.6 Analytics and Behavioral Data</h3>
+        <p>We DO NOT collect:</p>
+        <ul>
+          <li>Detailed usage analytics</li>
+          <li>Behavioral tracking or profiling</li>
+          <li>A/B testing data linked to individuals</li>
+          <li>Session replay or screen recording</li>
+          <li>Heatmaps or interaction tracking</li>
+          <li>Cross-app or cross-website tracking (without explicit permission)</li>
+          <li>User journey mapping or funnel analysis</li>
+          <li>Engagement metrics tied to individual users</li>
+        </ul>
+
+        <div class="highlight">
+          <p><strong>Why This Matters:</strong> By not collecting this information, we ensure that:</p>
+          <ul style="margin-top: 0.5rem; margin-bottom: 0;">
+            <li>Your media consumption habits remain private</li>
+            <li>You cannot be profiled or targeted based on your Unisaver usage without consent</li>
+            <li>Your personal information is not at risk of data breaches on our end</li>
+            <li>Your activity within Unisaver cannot be linked to your identity</li>
+            <li>There's no data to sell, share, or leak to third parties</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 4: How We Use Information -->
+      <div class="section" id="usage">
+        <h2 class="section-title">4. How We Use Information</h2>
+        
+        <p>For the limited information that is handled through Unisaver, here's how it may be used:</p>
+
+        <h3 class="section-subtitle">4.1 Local Data Processing (On Your Device Only)</h3>
+        
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">App Functionality</h4>
+        <p>Your locally stored data is processed entirely on your device to:</p>
+        <ul>
+          <li>Display your media library and content</li>
+          <li>Organize files according to your folder structure and preferences</li>
+          <li>Apply your selected theme, language, and interface settings</li>
+          <li>Enable search and filtering within your local library</li>
+          <li>Facilitate file management operations (rename, delete, move)</li>
+          <li>Generate local statistics (storage usage, file counts)</li>
+          <li>Provide vault security features (encryption, authentication)</li>
+          <li>Enable batch download operations</li>
+        </ul>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Offline Access</h4>
+        <p>All data processing for viewing and managing your content happens locally, ensuring:</p>
+        <ul>
+          <li>You can access your content without an internet connection</li>
+          <li>Your activity is not monitored or tracked</li>
+          <li>Content remains accessible even if our services are temporarily unavailable</li>
+          <li>No data about your usage leaves your device</li>
+        </ul>
+
+        <h3 class="section-subtitle">4.2 Anonymous Technical Data</h3>
+        <p>When we receive anonymized technical information, we use it to:</p>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Improve App Stability</h4>
+        <ul>
+          <li>Identify and fix crashes and bugs</li>
+          <li>Optimize performance across different devices</li>
+          <li>Improve compatibility with various operating systems</li>
+          <li>Reduce battery consumption and resource usage</li>
+          <li>Enhance loading times and responsiveness</li>
+          <li>Fix download errors and connection issues</li>
+        </ul>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Enhance User Experience</h4>
+        <ul>
+          <li>Understand which features are most valued</li>
+          <li>Prioritize development of new features</li>
+          <li>Improve interface design based on usage patterns</li>
+          <li>Optimize the app for different screen sizes and device types</li>
+          <li>Test new features before wide release</li>
+        </ul>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Platform Decisions</h4>
+        <ul>
+          <li>Determine which operating system versions to support</li>
+          <li>Decide which regions to prioritize for localization</li>
+          <li>Allocate resources for device-specific optimization</li>
+          <li>Plan infrastructure and server capacity</li>
+        </ul>
+
+        <h3 class="section-subtitle">4.3 Support Communications</h3>
+        <p>When you contact us, we use your information to:</p>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Provide Technical Support</h4>
+        <ul>
+          <li>Troubleshoot technical issues you're experiencing</li>
+          <li>Answer questions about app functionality</li>
+          <li>Guide you through feature usage</li>
+          <li>Resolve account-related concerns</li>
+          <li>Assist with download or playback problems</li>
+        </ul>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Improve Service Quality</h4>
+        <ul>
+          <li>Identify common problems and address them in updates</li>
+          <li>Train our support team based on real user issues</li>
+          <li>Develop help documentation and FAQs</li>
+          <li>Track resolution times and support effectiveness</li>
+        </ul>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Follow-Up</h4>
+        <ul>
+          <li>Ensure your issue was resolved satisfactorily</li>
+          <li>Notify you of fixes or updates related to your issue</li>
+          <li>Provide updates on feature requests</li>
+        </ul>
+
+        <h3 class="section-subtitle">4.4 Advertising and Device Identifiers</h3>
+        <p>Advertisements displayed in Unisaver help us offer the app for free. Device identifiers and related information may be used to:</p>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Serve Advertisements</h4>
+        <ul>
+          <li>Display ads within the app interface</li>
+          <li>Frequency cap (limit how often you see the same ad)</li>
+          <li>Prevent fraud and invalid traffic</li>
+        </ul>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Ad Personalization (With Your Permission)</h4>
+        <ul>
+          <li>Show more relevant advertisements based on general interests</li>
+          <li>Target ads by general demographics and location</li>
+          <li>Measure ad effectiveness</li>
+        </ul>
+        <p><strong>Important:</strong> In compliance with Apple's App Tracking Transparency framework, personalized advertising that involves tracking across apps and websites requires your explicit permission. You can control this through your device settings or when prompted by the app.</p>
+
+        <h3 class="section-subtitle">4.5 Legal and Safety Purposes</h3>
+        <p>In rare circumstances, we may use or disclose information to:</p>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Comply with Legal Obligations</h4>
+        <ul>
+          <li>Respond to valid legal requests (subpoenas, court orders)</li>
+          <li>Comply with applicable laws and regulations</li>
+          <li>Cooperate with law enforcement when legally required</li>
+        </ul>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Protect Rights and Safety</h4>
+        <ul>
+          <li>Enforce our Terms of Service</li>
+          <li>Investigate potential violations of our policies</li>
+          <li>Protect against fraud, spam, or abuse</li>
+          <li>Defend against legal claims</li>
+          <li>Protect the safety and security of users and the public</li>
+        </ul>
+        <p><strong>Note:</strong> Given our minimal data collection, such situations would primarily involve voluntary communications you've sent to us, not your in-app content or usage.</p>
+      </div>
+
+      <!-- Section 5: Data Security and Protection -->
+      <div class="section" id="security">
+        <h2 class="section-title">5. Data Security and Protection</h2>
+        
+        <p>Protecting your information is a priority. While most of your data is stored locally on your device, we take security seriously for any data that is handled.</p>
+
+        <h3 class="section-subtitle">5.1 Local Data Security</h3>
+        
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Your Device's Protection</h4>
+        <p>The security of your locally stored content depends primarily on your device's security features:</p>
+        <ul>
+          <li><strong>Operating System Security:</strong> Regular OS updates from Apple or Google</li>
+          <li><strong>App Sandboxing:</strong> Isolates Unisaver's data from other apps</li>
+          <li><strong>File System Permissions:</strong> Prevents unauthorized access</li>
+          <li><strong>Secure Storage:</strong> Provided by your device manufacturer</li>
+          <li><strong>Vault Encryption:</strong> Content in the vault is encrypted with industry-standard encryption</li>
+        </ul>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">What You Can Do</h4>
+        <p>We recommend taking these steps to protect your locally stored content:</p>
+        <ul>
+          <li>Enable your device's screen lock (PIN, password, pattern, or biometric)</li>
+          <li>Keep your device's operating system up to date</li>
+          <li>Only download Unisaver from official app stores (Google Play, Apple App Store)</li>
+          <li>Be cautious about granting device access to other apps</li>
+          <li>Regularly back up important content to secure locations</li>
+          <li>Use device encryption if available</li>
+          <li>Enable vault protection within Unisaver for sensitive content</li>
+          <li>Use strong PIN codes or biometric authentication for the vault</li>
+        </ul>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Important Limitations</h4>
+        <ul>
+          <li>If your device is lost, stolen, or accessed by unauthorized persons, your locally stored content may be accessible to them</li>
+          <li>Unisaver cannot remotely lock or erase your content</li>
+          <li>Jailbroken or rooted devices may have compromised security</li>
+          <li>We cannot recover vault content if you forget your PIN or lose access</li>
+        </ul>
+
+        <h3 class="section-subtitle">5.2 Data Transmission Security</h3>
+        <p>For any data that is transmitted (such as support emails or anonymous error reports):</p>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Encryption</h4>
+        <ul>
+          <li>Communications with our support team use standard email encryption</li>
+          <li>Error reports are transmitted over secure HTTPS connections when possible</li>
+          <li>Our website uses HTTPS encryption</li>
+          <li>API calls for download functionality use encrypted connections</li>
+        </ul>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Access Controls</h4>
+        <ul>
+          <li>Support communications are accessible only to authorized support staff</li>
+          <li>We implement role-based access controls</li>
+          <li>We limit data access to only what is necessary for each function</li>
+          <li>Regular security audits of our systems</li>
+        </ul>
+
+        <h3 class="section-subtitle">5.3 Third-Party Security</h3>
+        
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Advertising Networks</h4>
+        <p>Advertising partners have their own security measures in place. We work with reputable advertising networks that maintain industry-standard security practices, but we cannot guarantee the security of their systems.</p>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">App Store Platforms</h4>
+        <p>Your download and installation of Unisaver through app stores are protected by those platforms' security measures (Google Play Protect, Apple App Review, etc.).</p>
+
+        <h3 class="section-subtitle">5.4 Data Breach Notification</h3>
+        <p>Given that we do not collect or store significant amounts of user data on our servers, the risk of a data breach affecting your personal information is minimal. However, if we become aware of any security incident that may affect user information:</p>
+        <ul>
+          <li>We will assess the scope and impact of the incident</li>
+          <li>We will take immediate steps to contain and remediate the issue</li>
+          <li>We will notify affected users if their information may have been compromised</li>
+          <li>We will comply with applicable data breach notification laws</li>
+          <li>We will provide guidance on steps users can take to protect themselves</li>
+        </ul>
+
+        <h3 class="section-subtitle">5.5 Security Limitations</h3>
+        
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">No System is Completely Secure</h4>
+        <p>While we implement reasonable security measures, no system can be 100% secure. We cannot guarantee absolute security of information.</p>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Your Responsibility</h4>
+        <p>You are responsible for:</p>
+        <ul>
+          <li>Maintaining the security of your device</li>
+          <li>Keeping your support communications secure (if you contact us)</li>
+          <li>Using strong, unique passwords if we ever offer account features</li>
+          <li>Being cautious about phishing attempts or fraudulent communications claiming to be from Unisaver</li>
+        </ul>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Report Security Issues</h4>
+        <p>If you discover a security vulnerability in Unisaver, please report it responsibly by contacting us at: <strong>creedproduction4pps@gmail.com</strong> with subject line "Security Issue Report"</p>
+      </div>
+
+      <!-- Section 6: Third-Party Services -->
+      <div class="section" id="third-party">
+        <h2 class="section-title">6. Third-Party Services</h2>
+        
+        <p>Unisaver interacts with certain third-party services to function and remain sustainable. Here's what you should know about these relationships:</p>
+
+        <h3 class="section-subtitle">6.1 Advertising Networks</h3>
+        <p>To offer Unisaver for free, we display advertisements through third-party advertising networks.</p>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Common Advertising Partners</h4>
+        <p>We may work with established mobile advertising platforms, which could include networks such as:</p>
+        <ul>
+          <li>Google AdMob</li>
+          <li>Unity Ads</li>
+          <li>AppLovin</li>
+          <li>ironSource</li>
+          <li>Other industry-standard mobile ad networks</li>
+        </ul>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">What They Do</h4>
+        <p>Advertising networks:</p>
+        <ul>
+          <li>Serve advertisements within the app</li>
+          <li>Collect limited device information to deliver and measure ads</li>
+          <li>May personalize ads based on your general interests (with your permission)</li>
+          <li>Operate according to their own privacy policies</li>
+        </ul>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Your Control Over Ads</h4>
+        <p>You have several options to manage advertising:</p>
+
+        <h5 style="font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem; color: var(--text-primary);">Device-Level Controls</h5>
+        <ul>
+          <li><strong>iOS:</strong> Settings → Privacy & Security → Tracking → Toggle "Allow Apps to Request to Track"</li>
+          <li><strong>iOS:</strong> Settings → Privacy & Security → Apple Advertising → Toggle "Personalized Ads"</li>
+          <li><strong>Android:</strong> Settings → Google → Ads → Opt out of Ads Personalization</li>
+        </ul>
+
+        <h5 style="font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem; color: var(--text-primary);">Ad Choices</h5>
+        <p>Many advertising networks participate in industry self-regulation programs. You can learn more at:</p>
+        <ul>
+          <li>Digital Advertising Alliance: www.aboutads.info</li>
+          <li>Network Advertising Initiative: www.networkadvertising.org</li>
+        </ul>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Important Notes</h4>
+        <ul>
+          <li>We do not share your downloaded content or personal details with advertisers</li>
+          <li>We do not control the content of third-party advertisements</li>
+          <li>Clicking on ads may take you to external websites with their own privacy policies</li>
+          <li>Premium subscribers enjoy an ad-free experience</li>
+        </ul>
+
+        <h3 class="section-subtitle">6.2 App Store Platforms</h3>
+        <p>Unisaver is distributed through official app stores, which act as intermediaries.</p>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Google Play Store</h4>
+        <p>If you download Unisaver from Google Play:</p>
+        <ul>
+          <li>Google collects information about the download and installation</li>
+          <li>Google may collect payment information if you make in-app purchases</li>
+          <li>Google Play Services may provide certain app functions</li>
+          <li>Review Google's privacy policy at: policies.google.com/privacy</li>
+        </ul>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Apple App Store</h4>
+        <p>If you download Unisaver from the Apple App Store:</p>
+        <ul>
+          <li>Apple collects information about the download and installation</li>
+          <li>Apple may collect payment information if you make in-app purchases</li>
+          <li>Apple may provide certain app services through iOS</li>
+          <li>Review Apple's privacy policy at: www.apple.com/privacy</li>
+        </ul>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">What We Receive</h4>
+        <p>From app stores, we may receive:</p>
+        <ul>
+          <li>Anonymous download counts</li>
+          <li>General crash reports</li>
+          <li>App reviews and ratings</li>
+          <li>Basic demographic information (aggregated and anonymized)</li>
+        </ul>
+        <p>We do not receive your name, email address, or other personal information from app stores unless you explicitly provide it to us directly.</p>
+
+        <h3 class="section-subtitle">6.3 Analytics Services (If Applicable)</h3>
+        <p>If we use any analytics services to understand app performance, they would be limited to:</p>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Purpose</h4>
+        <ul>
+          <li>Measuring app crashes and errors</li>
+          <li>Understanding general usage patterns (anonymously)</li>
+          <li>Improving app stability and performance</li>
+        </ul>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Data Handling</h4>
+        <ul>
+          <li>Data is anonymized and aggregated</li>
+          <li>Cannot be linked to individual users</li>
+          <li>Used only for app improvement purposes</li>
+        </ul>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Currently Implemented Analytics</h4>
+        <p>We will maintain transparency about which analytics services, if any, are actively implemented in Unisaver.</p>
+
+        <h3 class="section-subtitle">6.4 Cloud Services and Infrastructure</h3>
+        
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Backend Infrastructure</h4>
+        <p>While your content is stored locally, we may use cloud services for:</p>
+        <ul>
+          <li>Hosting our website</li>
+          <li>Managing support email communications</li>
+          <li>Storing non-user-specific app resources</li>
+        </ul>
+        <p>These services process information on our behalf and are contractually obligated to protect it.</p>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">No Content Backup</h4>
+        <p>We do not operate cloud backup services for your downloaded content. All of your media remains solely on your device.</p>
+
+        <h3 class="section-subtitle">6.5 Links to External Websites and Services</h3>
+        <p>Unisaver may contain links to external websites or references to other services. When you leave Unisaver:</p>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">What Happens</h4>
+        <ul>
+          <li>You are subject to the privacy policies of those external sites</li>
+          <li>We are not responsible for the privacy practices of external sites</li>
+          <li>We do not control the content or policies of linked sites</li>
+        </ul>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Exercise Caution</h4>
+        <ul>
+          <li>Review privacy policies of any external sites you visit</li>
+          <li>Be aware that following links may take you out of the app</li>
+          <li>External sites may have different data collection practices</li>
+        </ul>
+
+        <h3 class="section-subtitle">6.6 Future Third-Party Services</h3>
+        <p>If we integrate additional third-party services in the future:</p>
+        <ul>
+          <li>We will update this privacy policy accordingly</li>
+          <li>We will select partners that maintain reasonable data protection practices</li>
+          <li>We will notify users of material changes through app updates</li>
+        </ul>
+      </div>
+
+      <!-- Section 7: App Tracking Transparency -->
+      <div class="section" id="tracking">
+        <h2 class="section-title">7. App Tracking Transparency and Your Choices</h2>
+        
+        <p>Unisaver respects your privacy choices regarding tracking and advertising. In compliance with Apple's App Tracking Transparency framework, we provide you with clear options and control.</p>
+
+        <h3 class="section-subtitle">7.1 What is App Tracking Transparency?</h3>
+        <p>App Tracking Transparency (ATT) is Apple's framework that requires apps to get user permission before tracking their data across apps or websites owned by other companies, or sharing user data with data brokers.</p>
+
+        <h3 class="section-subtitle">7.2 How We Implement ATT</h3>
+        <p>When you launch Unisaver on iOS devices, you may receive a permission request that asks:</p>
+        <p style="font-style: italic; padding-left: 1rem;">"Allow Unisaver to track your activity across other companies' apps and websites?"</p>
+
+        <p>This permission specifically controls whether we can:</p>
+        <ul>
+          <li>Access your device's advertising identifier (IDFA)</li>
+          <li>Use this identifier to deliver personalized advertising</li>
+          <li>Link data collected in our app with data collected from other companies' apps and websites for advertising purposes</li>
+        </ul>
+
+        <h3 class="section-subtitle">7.3 Your Choices and Their Effects</h3>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">If You Select "Allow":</h4>
+        <ul>
+          <li>You may see more relevant advertisements based on your interests</li>
+          <li>Advertising networks can personalize ads based on your activity across apps and websites</li>
+          <li>Advertising effectiveness may be measured across apps</li>
+        </ul>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">If You Select "Ask App Not to Track":</h4>
+        <ul>
+          <li>We will not access your device's advertising identifier for tracking purposes</li>
+          <li>We will not share your information with advertisers for cross-app or cross-site tracking</li>
+          <li>You will still see advertisements, but they will be less personalized</li>
+          <li>All other app functionality remains fully available</li>
+        </ul>
+
+        <h3 class="section-subtitle">7.4 Changing Your Mind</h3>
+        <p>You can change your tracking preferences at any time:</p>
+        <ul>
+          <li><strong>iOS System Settings:</strong> Settings → Privacy & Security → Tracking → Find and toggle Unisaver</li>
+          <li><strong>Within the App:</strong> Settings → Privacy → Ad Personalization</li>
+        </ul>
+
+        <h3 class="section-subtitle">7.5 Additional Controls</h3>
+        <p>Beyond ATT, you have additional controls over your privacy:</p>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Limit Ad Tracking (System-level)</h4>
+        <p>iOS devices offer additional controls to limit advertising personalization:</p>
+        <ul>
+          <li>Settings → Privacy & Security → Apple Advertising → Toggle "Personalized Ads"</li>
+        </ul>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Reset Advertising Identifier</h4>
+        <p>You can reset your device's advertising identifier to clear advertising profiles:</p>
+        <ul>
+          <li><strong>iOS:</strong> Settings → Privacy & Security → Tracking → Reset Advertising Identifier</li>
+          <li><strong>Android:</strong> Settings → Google → Ads → Reset advertising ID</li>
+        </ul>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Premium Subscription</h4>
+        <ul>
+          <li>Upgrade to Unisaver Premium for a completely ad-free experience</li>
+          <li>No ads means no advertising tracking at all</li>
+        </ul>
+      </div>
+
+      <!-- Section 8: Data Retention -->
+      <div class="section" id="retention">
+        <h2 class="section-title">8. Data Retention and Your Control</h2>
+
+        <h3 class="section-subtitle">8.1 Local Data Retention</h3>
+        <p>Content you save in Unisaver is stored locally on your device until you choose to delete it. We do not have access to this data and cannot delete it remotely.</p>
+
+        <p><strong>Your Control:</strong></p>
+        <ul>
+          <li>Delete individual files or folders at any time</li>
+          <li>Clear entire categories or collections</li>
+          <li>Empty vault contents</li>
+          <li>Clear browsing history and cache</li>
+          <li>Uninstall the app to remove all local data</li>
+        </ul>
+
+        <h3 class="section-subtitle">8.2 Limited Server-Side Data</h3>
+        <p>For the minimal data we may collect (such as crash reports or support emails):</p>
+        <ul>
+          <li>Technical data (crash reports, error logs) is retained for up to 12 months</li>
+          <li>Support communications are retained for up to 12 months after issue resolution</li>
+          <li>Anonymous metrics may be retained indefinitely in aggregate form only</li>
+        </ul>
+
+        <h3 class="section-subtitle">8.3 Your Control Over Your Data</h3>
+        <p>You can exercise control over your data in these ways:</p>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Deleting Local Content</h4>
+        <ul>
+          <li>Use the app's built-in delete functions to remove saved content</li>
+          <li>Clear app cache through your device settings</li>
+          <li>Uninstalling the app will remove all locally stored content</li>
+        </ul>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Opt-Out of Advertising Personalization</h4>
+        <ul>
+          <li>Follow the instructions in Section 7 to control tracking permissions</li>
+          <li>Use your device's advertising settings to limit personalization</li>
+        </ul>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Request Data Deletion</h4>
+        <p>Contact us at <strong>creedproduction4pps@gmail.com</strong> to:</p>
+        <ul>
+          <li>Request deletion of support communications</li>
+          <li>Ask questions about data we may have</li>
+          <li>Exercise your privacy rights</li>
+        </ul>
+      </div>
+
+      <!-- Section 9: Copyright -->
+      <div class="section" id="copyright">
+        <h2 class="section-title">9. Copyright and User Responsibilities</h2>
+
+        <h3 class="section-subtitle">9.1 Respecting Copyright</h3>
+        <p>Unisaver is designed to help you save content for personal, offline viewing. It's your responsibility to:</p>
+        <ul>
+          <li>Respect copyright and intellectual property rights</li>
+          <li>Only save content you have the legal right to download</li>
+          <li>Not use Unisaver for copyright infringement</li>
+          <li>Comply with terms of service of content platforms</li>
+          <li>Understand that "personal use" has legal limitations</li>
+        </ul>
+
+        <h3 class="section-subtitle">9.2 User Conduct</h3>
+        <p>When using Unisaver, you agree not to:</p>
+        <ul>
+          <li>Use the app for illegal activities</li>
+          <li>Attempt to circumvent technical protection measures</li>
+          <li>Redistribute or share content without proper rights</li>
+          <li>Modify the app's code or reverse-engineer it</li>
+          <li>Download content that violates platform terms of service</li>
+        </ul>
+
+        <h3 class="section-subtitle">9.3 Our Approach to Copyright</h3>
+        <p>We respect intellectual property rights and expect our users to do the same. We do not:</p>
+        <ul>
+          <li>Promote or enable copyright infringement</li>
+          <li>Store your downloaded content on our servers</li>
+          <li>Have access to the specific content you download</li>
+          <li>Monetize copyrighted content</li>
+        </ul>
+
+        <div class="highlight">
+          <p><strong>Disclaimer:</strong> Unisaver is a tool. Like a web browser or file manager, it can be used for legitimate purposes. Users are solely responsible for ensuring their use complies with applicable laws and platform terms of service.</p>
+        </div>
+      </div>
+
+      <!-- Section 10: Children's Privacy -->
+      <div class="section" id="children">
+        <h2 class="section-title">10. Children's Privacy</h2>
+
+        <p>Unisaver is not intended for children under the age of 13 (or the applicable minimum age in your jurisdiction). We do not knowingly collect personal information from children.</p>
+
+        <h3 class="section-subtitle">10.1 Age Restrictions</h3>
+        <ul>
+          <li>Users must be 13 years or older (or the minimum age in their jurisdiction)</li>
+          <li>We do not knowingly collect data from children</li>
+          <li>Parents should monitor their children's app usage</li>
+        </ul>
+
+        <h3 class="section-subtitle">10.2 Parental Controls</h3>
+        <p>If you are a parent or guardian and believe your child has provided personal information through Unisaver:</p>
+        <ul>
+          <li>Contact us at <strong>creedproduction4pps@gmail.com</strong></li>
+          <li>We will take appropriate steps to investigate and address the issue</li>
+          <li>We will delete any information collected from children</li>
+        </ul>
+
+        <h3 class="section-subtitle">10.3 Additional Protection</h3>
+        <ul>
+          <li>Use device-level parental controls to restrict app access</li>
+          <li>Enable app store parental controls for in-app purchases</li>
+          <li>Monitor downloaded content for age-appropriateness</li>
+        </ul>
+      </div>
+
+      <!-- Section 11: Your Privacy Rights -->
+      <div class="section" id="rights">
+        <h2 class="section-title">11. Your Privacy Rights</h2>
+
+        <p>Depending on your jurisdiction, you may have specific privacy rights. We are committed to honoring these rights regardless of where you live.</p>
+
+        <h3 class="section-subtitle">11.1 General Rights</h3>
+        <p>You have the right to:</p>
+        <ul>
+          <li><strong>Access:</strong> Know what personal information we collect about you</li>
+          <li><strong>Correction:</strong> Correct inaccurate information</li>
+          <li><strong>Deletion:</strong> Have your personal information deleted</li>
+          <li><strong>Portability:</strong> Receive your personal information in a usable format</li>
+          <li><strong>Opt-out:</strong> Opt-out of certain data uses, particularly related to advertising</li>
+        </ul>
+
+        <p><strong>Important Note:</strong> Because Unisaver collects very limited personal information, most of these rights would apply only to support communications you've sent us or to your tracking preferences.</p>
+
+        <h3 class="section-subtitle">11.2 California Residents (CCPA)</h3>
+        <p>Under the California Consumer Privacy Act (CCPA), you have specific rights regarding your personal information:</p>
+        <ul>
+          <li>Right to know what personal information is collected</li>
+          <li>Right to know if personal information is sold or shared</li>
+          <li>Right to opt-out of the sale of personal information</li>
+          <li>Right to deletion</li>
+          <li>Right to non-discrimination for exercising your rights</li>
+        </ul>
+
+        <p><strong>Note:</strong> We do not sell your personal information. Given our limited data collection, most CCPA requirements have minimal application to Unisaver.</p>
+
+        <h3 class="section-subtitle">11.3 EU/UK/EEA Residents (GDPR)</h3>
+        <p>Under the General Data Protection Regulation (GDPR) and UK GDPR, you have rights regarding your personal data:</p>
+        <ul>
+          <li>Right to access your personal data</li>
+          <li>Right to rectification of inaccurate data</li>
+          <li>Right to erasure ("right to be forgotten")</li>
+          <li>Right to restrict processing</li>
+          <li>Right to data portability</li>
+          <li>Right to object to processing</li>
+          <li>Rights related to automated decision-making</li>
+        </ul>
+
+        <p>Our legal bases for processing include:</p>
+        <ul>
+          <li><strong>Legitimate interests:</strong> App improvement and stability</li>
+          <li><strong>Consent:</strong> Advertising personalization</li>
+          <li><strong>Contract performance:</strong> Providing app functionality</li>
+          <li><strong>Legal obligation:</strong> Compliance with laws</li>
+        </ul>
+
+        <h3 class="section-subtitle">11.4 Other Jurisdictions</h3>
+        <p>We respect privacy rights in all jurisdictions. If you have privacy rights under laws not specifically mentioned here, please contact us to exercise them.</p>
+
+        <h3 class="section-subtitle">11.5 How to Exercise Your Rights</h3>
+        <p>To exercise any applicable privacy rights, contact us at:</p>
+        <p><strong>Email:</strong> creedproduction4pps@gmail.com</p>
+        <p>Please include:</p>
+        <ul>
+          <li>Your specific request</li>
+          <li>Information to verify your identity</li>
+          <li>Jurisdiction (if relevant)</li>
+        </ul>
+        <p>We will respond within the timeframe required by applicable law (typically 30-45 days).</p>
+      </div>
+
+      <!-- Section 12: International -->
+      <div class="section" id="international">
+        <h2 class="section-title">12. International Considerations</h2>
+
+        <h3 class="section-subtitle">12.1 Global Availability</h3>
+        <p>Unisaver is available globally. If you use our app outside of Uganda:</p>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Data Transfer</h4>
+        <ul>
+          <li>Limited anonymous technical data may be transferred to Uganda or other countries for processing</li>
+          <li>Your locally stored content never leaves your device</li>
+          <li>Transfers are protected by appropriate safeguards</li>
+        </ul>
+
+        <h4 style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Legal Bases</h4>
+        <p>Where required by law (such as under GDPR), our legal bases for processing include:</p>
+        <ul>
+          <li><strong>Legitimate interests:</strong> For app improvement and stability</li>
+          <li><strong>Consent:</strong> For advertising personalization</li>
+          <li><strong>Contract performance:</strong> For providing app functionality</li>
+          <li><strong>Legal obligation:</strong> For compliance with laws</li>
+        </ul>
+
+        <h3 class="section-subtitle">12.2 Regional Differences</h3>
+        <p>Privacy laws vary by region, and we strive to respect all applicable laws:</p>
+        <ul>
+          <li>Some features may be unavailable or work differently based on your location</li>
+          <li>We comply with local requirements for data handling</li>
+          <li>Regional variations are implemented to ensure compliance</li>
+        </ul>
+
+        <h3 class="section-subtitle">12.3 Language</h3>
+        <p>This privacy policy is provided in multiple languages for your convenience. In case of any conflict between translations, the English version prevails.</p>
+      </div>
+
+      <!-- Section 13: Changes -->
+      <div class="section" id="changes">
+        <h2 class="section-title">13. Changes to This Policy</h2>
+
+        <h3 class="section-subtitle">13.1 Updates</h3>
+        <p>We may update this Privacy Policy to reflect changes in our practices or legal requirements. When we make significant changes, we will:</p>
+        <ul>
+          <li>Update the "Last Updated" date at the top of the policy</li>
+          <li>Provide in-app notification of material changes</li>
+          <li>Obtain consent when required by applicable law</li>
+          <li>Post the updated policy on our website</li>
+        </ul>
+
+        <h3 class="section-subtitle">13.2 Review</h3>
+        <p>We encourage you to periodically review this Privacy Policy to stay informed about our privacy practices.</p>
+
+        <h3 class="section-subtitle">13.3 Notification</h3>
+        <p>For material changes that significantly affect your privacy:</p>
+        <ul>
+          <li>We will provide prominent notice within the app</li>
+          <li>You may be required to accept the updated policy</li>
+          <li>You can always decline and discontinue using the app</li>
+        </ul>
+
+        <h3 class="section-subtitle">13.4 Version History</h3>
+        <p>Previous versions of this policy are available upon request. Contact us at <strong>creedproduction4pps@gmail.com</strong> to request older versions.</p>
+      </div>
+
+      <!-- Section 14: Contact -->
+      <div class="section" id="contact">
+        <h2 class="section-title">14. Contact Information</h2>
+
+        <p>If you have questions or concerns about this Privacy Policy or our privacy practices, please contact us:</p>
+
+        <h3 class="section-subtitle">Email</h3>
+        <p><strong>creedproduction4pps@gmail.com</strong></p>
+        <p>We are committed to responding to privacy inquiries promptly.</p>
+
+        <h3 class="section-subtitle">Social Media</h3>
+        <ul>
+          <li><strong>Telegram:</strong> <a href="https://t.me/unisaverdownloader" style="color: var(--primary-600);">https://t.me/unisaverdownloader</a></li>
+          <li><strong>WhatsApp:</strong> <a href="https://whatsapp.com/channel/0029VbBBhUM7T8bgMHp4Oq3b" style="color: var(--primary-600);">https://whatsapp.com/channel/0029VbBBhUM7T8bgMHp4Oq3b</a></li>
+          <li><strong>X (Twitter):</strong> @unisaverapps (<a href="https://x.com/UnisaverApps" style="color: var(--primary-600);">https://x.com/UnisaverApps</a>)</li>
+          <li><strong>Instagram:</strong> @unisaverapps</li>
+          <li><strong>Facebook:</strong> @unisaverapps</li>
+          <li><strong>Threads:</strong> @unisaverapps</li>
+          <li><strong>YouTube:</strong> @unisaverapp</li>
+        </ul>
+
+        <h3 class="section-subtitle">Response Time</h3>
+        <p>We strive to respond to all privacy inquiries as soon as possible, typically within 30 days. For urgent privacy concerns, please mark your email as "Urgent Privacy Request."</p>
+
+        <h3 class="section-subtitle">Privacy Complaints</h3>
+        <p>If you have a complaint about our privacy practices:</p>
+        <ol>
+          <li>Contact us directly first at the email above</li>
+          <li>We will work with you to resolve the issue</li>
+          <li>If not satisfied, you may have the right to lodge a complaint with your local data protection authority</li>
+        </ol>
+
+        <div class="highlight">
+          <p><strong>Thank you for trusting Unisaver with your privacy.</strong> We are committed to protecting your personal information and providing you with a safe, secure, and private media management experience.</p>
+          <p style="margin-top: 1rem; margin-bottom: 0;"><strong>© Creed Productions</strong> — Building privacy-first applications since 2024</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="terms.html" class="footer-link">Terms of Service</a>
+        <a href="mailto:creedproduction4pps@gmail.com" class="footer-link">Contact</a>
+      </div>
+      <p>© <span id="year"></span> Creed Productions. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Theme Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const themeToggleSlider = themeToggle?.querySelector('.theme-toggle-slider i');
+    const html = document.documentElement;
+
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+
+    function updateThemeIcon(theme) {
+      if (!themeToggleSlider) return;
+      if (theme === 'dark') {
+        themeToggleSlider.className = 'fa-solid fa-moon';
+      } else {
+        themeToggleSlider.className = 'fa-solid fa-sun';
+      }
+    }
+
+    themeToggle?.addEventListener('click', () => {
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcon(newTheme);
+    });
+
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth scroll for TOC links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
