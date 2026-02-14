@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Terms of Service - Unisaver Premium</title>
+  <meta name="description" content="Terms of Service for Unisaver Premium subscription" />
+  <link rel="canonical" href="https://creedproductions.github.io/unisaver-downloader/terms" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="logo.png" />
+  <link rel="apple-touch-icon" href="logo.png" sizes="180x180" />
+  <meta name="theme-color" content="#2563eb" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    :root {
+      --primary-600: #2563eb;
+      --primary-700: #1d4ed8;
+      --primary-50: #eff6ff;
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-300: #d1d5db;
+      --gray-600: #4b5563;
+      --gray-700: #374151;
+      --gray-800: #1f2937;
+      --gray-900: #111827;
+      
+      --bg-primary: #ffffff;
+      --bg-secondary: #f9fafb;
+      --text-primary: #111827;
+      --text-secondary: #4b5563;
+      --border-color: #e5e7eb;
+      
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    [data-theme="dark"] {
+      --bg-primary: #0f172a;
+      --bg-secondary: #1e293b;
+      --text-primary: #f1f5f9;
+      --text-secondary: #cbd5e1;
+      --border-color: #334155;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background: var(--bg-primary);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+    }
+
+    [data-theme="dark"] .navbar {
+      background: rgba(15, 23, 42, 0.8);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 800;
+      font-size: 1.125rem;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    .nav-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+
+    .nav-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .theme-toggle {
+      position: relative;
+      width: 56px;
+      height: 28px;
+      background: var(--gray-200);
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      border: 2px solid var(--border-color);
+    }
+
+    [data-theme="dark"] .theme-toggle {
+      background: var(--gray-700);
+    }
+
+    .theme-toggle-slider {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 20px;
+      height: 20px;
+      background: #ffffff;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .theme-toggle-slider i {
+      font-size: 10px;
+      color: var(--primary-600);
+    }
+
+    [data-theme="dark"] .theme-toggle-slider {
+      transform: translateX(28px);
+    }
+
+    .header {
+      padding: 4rem 0 2rem;
+      text-align: center;
+      background: linear-gradient(to bottom, var(--primary-50) 0%, var(--bg-primary) 100%);
+    }
+
+    [data-theme="dark"] .header {
+      background: linear-gradient(to bottom, rgba(37, 99, 235, 0.1) 0%, var(--bg-primary) 100%);
+    }
+
+    .header-title {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+    }
+
+    .header-subtitle {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.5rem;
+    }
+
+    .header-date {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    .content {
+      padding: 3rem 0;
+    }
+
+    .toc {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .toc-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+    }
+
+    .toc-list {
+      list-style: none;
+    }
+
+    .toc-list li {
+      margin-bottom: 0.5rem;
+    }
+
+    .toc-list a {
+      color: var(--primary-600);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .toc-list a:hover {
+      color: var(--primary-700);
+      text-decoration: underline;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section-title {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+      padding-top: 1rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .section p {
+      margin-bottom: 1rem;
+      color: var(--text-secondary);
+    }
+
+    .section ul, .section ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--text-secondary);
+    }
+
+    .section li {
+      margin-bottom: 0.5rem;
+    }
+
+    .highlight {
+      background: var(--primary-50);
+      border-left: 4px solid var(--primary-600);
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 0.5rem;
+    }
+
+    [data-theme="dark"] .highlight {
+      background: rgba(37, 99, 235, 0.1);
+    }
+
+    .highlight p {
+      margin: 0;
+    }
+
+    strong {
+      color: var(--text-primary);
+      font-weight: 700;
+    }
+
+    .footer {
+      background: var(--gray-900);
+      color: var(--gray-300);
+      padding: 3rem 0 2rem;
+      margin-top: 4rem;
+      text-align: center;
+    }
+
+    .footer p {
+      font-size: 0.875rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-link {
+      color: var(--primary-600);
+      text-decoration: none;
+    }
+
+    .footer-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .header-title {
+        font-size: 2rem;
+      }
+      
+      .section-title {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-container">
+        <a href="index.html" class="nav-brand">
+          <div class="nav-logo">
+            <img src="logo.png" alt="Unisaver">
+          </div>
+          Unisaver
+        </a>
+
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <div class="theme-toggle-slider">
+            <i class="fa-solid fa-sun"></i>
+          </div>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <h1 class="header-title">Terms of Service</h1>
+      <p class="header-subtitle">Unisaver Premium Subscription</p>
+      <p class="header-date">Effective Date: February 24, 2025 • Last Updated: February 14, 2026</p>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <div class="content">
+    <div class="container">
+      <!-- Table of Contents -->
+      <div class="toc">
+        <h2 class="toc-title">Table of Contents</h2>
+        <ol class="toc-list">
+          <li><a href="#acceptance">1. Acceptance of Terms</a></li>
+          <li><a href="#premium">2. Unisaver Premium Subscription</a></li>
+          <li><a href="#payment">3. Payment and Billing</a></li>
+          <li><a href="#cancellation">4. Cancellation and Refunds</a></li>
+          <li><a href="#license">5. License and Usage Rights</a></li>
+          <li><a href="#prohibited">6. Prohibited Uses</a></li>
+          <li><a href="#content">7. User Content and Responsibilities</a></li>
+          <li><a href="#disclaimer">8. Disclaimer of Warranties</a></li>
+          <li><a href="#limitation">9. Limitation of Liability</a></li>
+          <li><a href="#termination">10. Termination</a></li>
+          <li><a href="#changes">11. Changes to Terms</a></li>
+          <li><a href="#governing">12. Governing Law</a></li>
+          <li><a href="#contact">13. Contact Information</a></li>
+        </ol>
+      </div>
+
+      <!-- Section 1 -->
+      <div class="section" id="acceptance">
+        <h2 class="section-title">1. Acceptance of Terms</h2>
+        <p>Welcome to Unisaver. By downloading, installing, accessing, or using the Unisaver application ("App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the App.</p>
+        
+        <p>These Terms constitute a legally binding agreement between you ("User," "you," or "your") and Creed Productions ("we," "us," or "our"), the developer and operator of Unisaver.</p>
+
+        <div class="highlight">
+          <p><strong>Important:</strong> By subscribing to Unisaver Premium, you acknowledge that you have read, understood, and agree to be bound by these Terms, including our Privacy Policy.</p>
+        </div>
+      </div>
+
+      <!-- Section 2 -->
+      <div class="section" id="premium">
+        <h2 class="section-title">2. Unisaver Premium Subscription</h2>
+        
+        <h3 class="section-subtitle">2.1 What is Unisaver Premium?</h3>
+        <p>Unisaver Premium is an optional paid subscription service that provides enhanced features and functionality beyond the free version of the App. Premium features may include:</p>
+        <ul>
+          <li>Ad-free experience across the entire application</li>
+          <li>Unlimited downloads without restrictions</li>
+          <li>Batch download capability for multiple files simultaneously</li>
+          <li>High-quality (HD/4K) video downloads</li>
+          <li>Audio-only extraction from videos</li>
+          <li>Priority customer support</li>
+          <li>Early access to new features and updates</li>
+          <li>Exclusive themes and customization options</li>
+          <li>Advanced vault security features</li>
+        </ul>
+
+        <h3 class="section-subtitle">2.2 Subscription Plans</h3>
+        <p>Unisaver Premium is available through the following subscription plans:</p>
+        <ul>
+          <li><strong>Monthly Subscription:</strong> Automatically renews every month</li>
+          <li><strong>Annual Subscription:</strong> Automatically renews every year (typically offered at a discounted rate)</li>
+          <li><strong>Lifetime Purchase:</strong> One-time payment for permanent access (where available)</li>
+        </ul>
+
+        <p>Pricing for each plan is displayed in the App and through your device's app store at the time of purchase. Prices may vary by region and currency.</p>
+
+        <h3 class="section-subtitle">2.3 Free Trial</h3>
+        <p>We may offer a free trial period for new Premium subscribers. The duration of the free trial will be clearly disclosed at the time of subscription. You will not be charged during the free trial period. If you do not cancel before the trial ends, you will automatically be charged for your chosen subscription plan.</p>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="section" id="payment">
+        <h2 class="section-title">3. Payment and Billing</h2>
+
+        <h3 class="section-subtitle">3.1 Payment Processing</h3>
+        <p>All payments for Unisaver Premium are processed through your device's app store (Apple App Store or Google Play Store). We do not directly process or store your payment information. By subscribing, you agree to the payment terms of your respective app store.</p>
+
+        <h3 class="section-subtitle">3.2 Automatic Renewal</h3>
+        <p>Unless you cancel your subscription before the end of the current billing period, your Premium subscription will automatically renew for the same duration at the then-current subscription price. You authorize us (through your app store) to charge your payment method for the renewal.</p>
+
+        <p>Automatic renewal charges typically occur within 24 hours before the end of your current subscription period.</p>
+
+        <h3 class="section-subtitle">3.3 Price Changes</h3>
+        <p>We reserve the right to change subscription prices at any time. Price changes will not affect current subscribers until their next renewal period. You will be notified of any price changes in advance, and you may cancel your subscription if you do not agree to the new pricing.</p>
+
+        <h3 class="section-subtitle">3.4 Taxes</h3>
+        <p>Prices displayed may not include applicable taxes. You are responsible for any taxes, duties, or fees imposed by your jurisdiction on your subscription purchase.</p>
+      </div>
+
+      <!-- Section 4 -->
+      <div class="section" id="cancellation">
+        <h2 class="section-title">4. Cancellation and Refunds</h2>
+
+        <h3 class="section-subtitle">4.1 Cancellation</h3>
+        <p>You may cancel your Unisaver Premium subscription at any time through your device's app store settings:</p>
+        <ul>
+          <li><strong>iOS:</strong> Settings → [Your Name] → Subscriptions → Unisaver Premium → Cancel Subscription</li>
+          <li><strong>Android:</strong> Play Store → Menu → Subscriptions → Unisaver Premium → Cancel Subscription</li>
+        </ul>
+
+        <p>When you cancel, you will continue to have access to Premium features until the end of your current billing period. No partial refunds are provided for unused portions of a billing period.</p>
+
+        <h3 class="section-subtitle">4.2 Refund Policy</h3>
+        <p>Refunds are governed by the refund policies of the Apple App Store or Google Play Store, as applicable:</p>
+        <ul>
+          <li><strong>Apple App Store:</strong> Request refunds through reportaproblem.apple.com within the timeframe specified by Apple's policies</li>
+          <li><strong>Google Play Store:</strong> Request refunds through the Play Store app or play.google.com/store/account within the timeframe specified by Google's policies</li>
+        </ul>
+
+        <p>We have no control over app store refund decisions. If you believe you are entitled to a refund and the app store denies your request, you may contact us at creedproduction4pps@gmail.com to discuss your situation.</p>
+
+        <h3 class="section-subtitle">4.3 Exceptions</h3>
+        <p>Certain purchases may not be eligible for refunds, including:</p>
+        <ul>
+          <li>Lifetime purchases after the initial refund window has passed</li>
+          <li>Subscriptions that have been active for more than the app store's refund period</li>
+          <li>Accounts that have violated these Terms of Service</li>
+        </ul>
+      </div>
+
+      <!-- Section 5 -->
+      <div class="section" id="license">
+        <h2 class="section-title">5. License and Usage Rights</h2>
+
+        <h3 class="section-subtitle">5.1 Limited License</h3>
+        <p>Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to download, install, and use the Unisaver App on devices that you own or control, solely for your personal, non-commercial use.</p>
+
+        <h3 class="section-subtitle">5.2 Premium Features License</h3>
+        <p>Your Unisaver Premium subscription grants you access to Premium features only for the duration of your active subscription. This license automatically terminates when your subscription expires or is cancelled.</p>
+
+        <h3 class="section-subtitle">5.3 Restrictions</h3>
+        <p>You agree NOT to:</p>
+        <ul>
+          <li>Copy, modify, distribute, sell, or lease any part of the App or its content</li>
+          <li>Reverse engineer, decompile, or attempt to extract the source code of the App</li>
+          <li>Remove, obscure, or alter any copyright, trademark, or proprietary notices</li>
+          <li>Use the App to violate any applicable laws or regulations</li>
+          <li>Share your Premium subscription with others or use it on more devices than permitted</li>
+          <li>Attempt to circumvent any technological protection measures in the App</li>
+          <li>Use automated systems or bots to interact with the App</li>
+        </ul>
+
+        <h3 class="section-subtitle">5.4 Intellectual Property</h3>
+        <p>All rights, title, and interest in and to the Unisaver App, including all intellectual property rights, remain with Creed Productions. These Terms do not grant you any ownership rights to the App.</p>
+      </div>
+
+      <!-- Section 6 -->
+      <div class="section" id="prohibited">
+        <h2 class="section-title">6. Prohibited Uses</h2>
+
+        <p>When using Unisaver, you agree NOT to:</p>
+
+        <h3 class="section-subtitle">6.1 Copyright Infringement</h3>
+        <ul>
+          <li>Download or distribute copyrighted content without proper authorization</li>
+          <li>Circumvent digital rights management (DRM) or other content protection systems</li>
+          <li>Violate the terms of service of platforms from which you download content</li>
+          <li>Use downloaded content for commercial purposes without proper licensing</li>
+        </ul>
+
+        <h3 class="section-subtitle">6.2 Illegal Activities</h3>
+        <ul>
+          <li>Download, store, or distribute illegal content (including but not limited to child sexual abuse material, terrorist content, or content that incites violence)</li>
+          <li>Use the App to harass, stalk, or harm others</li>
+          <li>Engage in fraud, phishing, or identity theft</li>
+          <li>Violate privacy laws or regulations</li>
+        </ul>
+
+        <h3 class="section-subtitle">6.3 Service Abuse</h3>
+        <ul>
+          <li>Overload, disrupt, or interfere with the App's servers or infrastructure</li>
+          <li>Attempt to gain unauthorized access to any part of the App or its systems</li>
+          <li>Use the App to distribute malware, viruses, or harmful code</li>
+          <li>Engage in any activity that could damage, disable, or impair the App</li>
+        </ul>
+
+        <div class="highlight">
+          <p><strong>Important:</strong> Violation of these prohibited uses may result in immediate termination of your account and subscription without refund, and may expose you to legal liability.</p>
+        </div>
+      </div>
+
+      <!-- Section 7 -->
+      <div class="section" id="content">
+        <h2 class="section-title">7. User Content and Responsibilities</h2>
+
+        <h3 class="section-subtitle">7.1 Your Content</h3>
+        <p>You are solely responsible for any content you download, save, or manage using Unisaver ("Your Content"). This includes ensuring that you have the legal right to download and possess such content.</p>
+
+        <h3 class="section-subtitle">7.2 Copyright Compliance</h3>
+        <p>You acknowledge and agree that:</p>
+        <ul>
+          <li>You will respect intellectual property rights and only download content you are authorized to access</li>
+          <li>You will comply with all applicable copyright laws and regulations</li>
+          <li>You will honor the terms of service of platforms from which you download content</li>
+          <li>Personal, non-commercial use does not automatically grant you the right to download copyrighted content</li>
+        </ul>
+
+        <h3 class="section-subtitle">7.3 No Monitoring</h3>
+        <p>We do not monitor, review, or have access to Your Content. Content you download is stored locally on your device, and we have no knowledge of or control over what you choose to download or save.</p>
+
+        <h3 class="section-subtitle">7.4 Third-Party Platforms</h3>
+        <p>Unisaver enables you to download content from third-party platforms. We are not affiliated with, endorsed by, or sponsored by these platforms. You agree to comply with the terms of service of any third-party platform you interact with through the App.</p>
+      </div>
+
+      <!-- Section 8 -->
+      <div class="section" id="disclaimer">
+        <h2 class="section-title">8. Disclaimer of Warranties</h2>
+
+        <p>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW:</p>
+
+        <h3 class="section-subtitle">8.1 "AS IS" Provision</h3>
+        <p>THE UNISAVER APP AND ALL PREMIUM FEATURES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO:</p>
+        <ul>
+          <li>Warranties of merchantability, fitness for a particular purpose, or non-infringement</li>
+          <li>Warranties that the App will be uninterrupted, secure, or error-free</li>
+          <li>Warranties regarding the accuracy, reliability, or completeness of any content</li>
+          <li>Warranties that defects will be corrected</li>
+        </ul>
+
+        <h3 class="section-subtitle">8.2 No Guarantee of Functionality</h3>
+        <p>We do not guarantee that:</p>
+        <ul>
+          <li>The App will work with all devices, operating systems, or configurations</li>
+          <li>Downloads will always succeed from all platforms or websites</li>
+          <li>Third-party platforms will continue to allow downloads</li>
+          <li>Premium features will remain unchanged or available indefinitely</li>
+        </ul>
+
+        <h3 class="section-subtitle">8.3 Platform Changes</h3>
+        <p>Third-party platforms may change their systems, APIs, or policies at any time, which may affect the App's ability to download content from those platforms. We are not liable for any loss of functionality due to such changes.</p>
+      </div>
+
+      <!-- Section 9 -->
+      <div class="section" id="limitation">
+        <h2 class="section-title">9. Limitation of Liability</h2>
+
+        <p>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW:</p>
+
+        <h3 class="section-subtitle">9.1 No Liability for Damages</h3>
+        <p>IN NO EVENT SHALL CREED PRODUCTIONS, ITS OFFICERS, DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE FOR ANY:</p>
+        <ul>
+          <li>Indirect, incidental, special, consequential, or punitive damages</li>
+          <li>Loss of profits, revenue, data, or use</li>
+          <li>Loss of or damage to property</li>
+          <li>Claims of third parties</li>
+        </ul>
+
+        <p>ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF THE APP OR PREMIUM SUBSCRIPTION, WHETHER BASED ON WARRANTY, CONTRACT, TORT (INCLUDING NEGLIGENCE), OR ANY OTHER LEGAL THEORY, AND WHETHER OR NOT WE HAVE BEEN INFORMED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+
+        <h3 class="section-subtitle">9.2 Maximum Liability</h3>
+        <p>OUR TOTAL LIABILITY TO YOU FOR ALL CLAIMS ARISING FROM OR RELATED TO THE APP OR THESE TERMS SHALL NOT EXCEED THE AMOUNT YOU PAID TO US FOR YOUR PREMIUM SUBSCRIPTION IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM.</p>
+
+        <h3 class="section-subtitle">9.3 Exceptions</h3>
+        <p>Some jurisdictions do not allow the exclusion or limitation of certain warranties or liabilities. In such jurisdictions, our liability will be limited to the maximum extent permitted by law.</p>
+      </div>
+
+      <!-- Section 10 -->
+      <div class="section" id="termination">
+        <h2 class="section-title">10. Termination</h2>
+
+        <h3 class="section-subtitle">10.1 Termination by You</h3>
+        <p>You may terminate your use of the App at any time by:</p>
+        <ul>
+          <li>Cancelling your Premium subscription (as described in Section 4.1)</li>
+          <li>Uninstalling the App from your device</li>
+          <li>Ceasing all use of the App</li>
+        </ul>
+
+        <h3 class="section-subtitle">10.2 Termination by Us</h3>
+        <p>We reserve the right to suspend or terminate your access to the App and your Premium subscription, with or without notice, if:</p>
+        <ul>
+          <li>You violate these Terms of Service</li>
+          <li>You engage in fraudulent or illegal activities</li>
+          <li>Your payment method fails or is disputed</li>
+          <li>We are required to do so by law or legal authority</li>
+          <li>We discontinue the App or Premium service</li>
+        </ul>
+
+        <h3 class="section-subtitle">10.3 Effect of Termination</h3>
+        <p>Upon termination:</p>
+        <ul>
+          <li>Your right to use Premium features will immediately cease</li>
+          <li>You will not be entitled to a refund for any unused portion of your subscription (unless required by law)</li>
+          <li>Locally stored content on your device will remain, but you may lose access to certain App features</li>
+          <li>Sections of these Terms that by their nature should survive termination will remain in effect</li>
+        </ul>
+      </div>
+
+      <!-- Section 11 -->
+      <div class="section" id="changes">
+        <h2 class="section-title">11. Changes to Terms</h2>
+
+        <h3 class="section-subtitle">11.1 Modification Rights</h3>
+        <p>We reserve the right to modify these Terms at any time. When we make material changes, we will:</p>
+        <ul>
+          <li>Update the "Last Updated" date at the top of this document</li>
+          <li>Provide notice through the App or via email (if we have your email address)</li>
+          <li>Give you the opportunity to review the changes before they take effect</li>
+        </ul>
+
+        <h3 class="section-subtitle">11.2 Acceptance of Changes</h3>
+        <p>Your continued use of the App or Premium subscription after the effective date of any changes constitutes your acceptance of the revised Terms. If you do not agree to the modified Terms, you should cancel your subscription and discontinue use of the App.</p>
+
+        <h3 class="section-subtitle">11.3 Material Changes to Subscription</h3>
+        <p>If we make material changes that significantly affect your Premium subscription (such as removing key features), we will provide advance notice and you may cancel your subscription for a prorated refund if you do not agree to the changes.</p>
+      </div>
+
+      <!-- Section 12 -->
+      <div class="section" id="governing">
+        <h2 class="section-title">12. Governing Law and Dispute Resolution</h2>
+
+        <h3 class="section-subtitle">12.1 Governing Law</h3>
+        <p>These Terms shall be governed by and construed in accordance with the laws of Uganda, without regard to its conflict of law provisions.</p>
+
+        <h3 class="section-subtitle">12.2 Dispute Resolution</h3>
+        <p>Any dispute arising from or relating to these Terms or your use of the App shall be resolved through the following process:</p>
+        <ol>
+          <li><strong>Informal Resolution:</strong> Contact us at creedproduction4pps@gmail.com to attempt to resolve the dispute informally</li>
+          <li><strong>Mediation:</strong> If informal resolution fails, we agree to participate in good-faith mediation before pursuing legal action</li>
+          <li><strong>Legal Action:</strong> If mediation is unsuccessful, disputes shall be resolved in the courts of Uganda</li>
+        </ol>
+
+        <h3 class="section-subtitle">12.3 Exceptions</h3>
+        <p>Notwithstanding the above, we may seek injunctive or other equitable relief in any jurisdiction to protect our intellectual property rights or confidential information.</p>
+
+        <h3 class="section-subtitle">12.4 Class Action Waiver</h3>
+        <p>To the extent permitted by law, you agree that any dispute resolution proceedings will be conducted only on an individual basis and not in a class, consolidated, or representative action.</p>
+      </div>
+
+      <!-- Section 13 -->
+      <div class="section" id="contact">
+        <h2 class="section-title">13. Contact Information</h2>
+
+        <p>If you have any questions about these Terms of Service, please contact us:</p>
+
+        <h3 class="section-subtitle">Email</h3>
+        <p><strong>creedproduction4pps@gmail.com</strong></p>
+
+        <h3 class="section-subtitle">Social Media</h3>
+        <ul>
+          <li><strong>Telegram:</strong> https://t.me/unisaverdownloader</li>
+          <li><strong>WhatsApp:</strong> https://whatsapp.com/channel/0029VbBBhUM7T8bgMHp4Oq3b</li>
+          <li><strong>X (Twitter):</strong> @unisaverapps</li>
+          <li><strong>Instagram:</strong> @unisaverapps</li>
+          <li><strong>YouTube:</strong> @unisaverapp</li>
+        </ul>
+
+        <h3 class="section-subtitle">Response Time</h3>
+        <p>We strive to respond to all inquiries within 3-5 business days. For Premium subscribers experiencing issues, we aim for faster response times.</p>
+
+        <div class="highlight">
+          <p><strong>Thank you for choosing Unisaver Premium!</strong> We are committed to providing you with the best media downloading experience while respecting your privacy and rights.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="privacy.html" class="footer-link">Privacy Policy</a>
+        <a href="mailto:creedproduction4pps@gmail.com" class="footer-link">Contact</a>
+      </div>
+      <p>© <span id="year"></span> Creed Productions. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Theme Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const themeToggleSlider = themeToggle?.querySelector('.theme-toggle-slider i');
+    const html = document.documentElement;
+
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+
+    function updateThemeIcon(theme) {
+      if (!themeToggleSlider) return;
+      if (theme === 'dark') {
+        themeToggleSlider.className = 'fa-solid fa-moon';
+      } else {
+        themeToggleSlider.className = 'fa-solid fa-sun';
+      }
+    }
+
+    themeToggle?.addEventListener('click', () => {
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcon(newTheme);
+    });
+
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth scroll for TOC links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
